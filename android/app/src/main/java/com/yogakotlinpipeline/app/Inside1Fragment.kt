@@ -70,13 +70,9 @@ class Inside1Fragment : Fragment() {
             android.widget.Toast.makeText(context, "Notifications", android.widget.Toast.LENGTH_SHORT).show()
         }
 
-        // Chatbot Button (if exists in layout)
-        try {
-            binding.btnChatbot?.setOnClickListener {
-                findNavController().navigate(R.id.action_inside1Fragment_to_chatbotFragment)
-            }
-        } catch (e: Exception) {
-            Log.w("Inside1Fragment", "btnChatbot not found in layout")
+        // Chatbot Button
+        binding.fabChatbot.setOnClickListener {
+            findNavController().navigate(R.id.action_inside1Fragment_to_chatbotFragment)
         }
 
         // Footer Navigation

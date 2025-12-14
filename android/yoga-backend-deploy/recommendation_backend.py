@@ -1,60 +1,59 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List
 import pickle
 import numpy as np
-from sentence_transformers import SentenceTransformer, util
-import google.generativeai as genai
 import os
+import gc
+
+from sentence_transformers import SentenceTransformer
+import google.generativeai as genai
 from dotenv import load_dotenv
+from functools import lru_cache
+
+# --------------------------------------------------
+# Environment and app setup
+# --------------------------------------------------
 
 load_dotenv()
 
 print("Starting Yoga Backend...")
-print(f"Python version: {__import__('sys').version}")
-print(f"Current working directory: {os.getcwd()}")
-print(f"Files in current directory: {os.listdir('.')}")
 
-app = FastAPI(title="Yoga Backend", version="1.0")
+app = FastAPI(title="Yoga Backend", version="1.2")
 
-print("Initializing Generative AI...")
-# Initialize Generative AI
 api_key = os.getenv("GOOGLE_API_KEY", "")
 if api_key:
-    print("API Key found, configuring genai...")
     genai.configure(api_key=api_key)
 else:
     print("WARNING: GOOGLE_API_KEY not set")
 
-print("Loading SentenceTransformer model...")
-# Load embeddings
-model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
-print("SentenceTransformer model loaded")
+# --------------------------------------------------
+# Singleton model loader (prevents memory growth)
+# --------------------------------------------------
 
-# Try multiple paths for yoga_embeddings.pkl
-import os
-pkl_paths = [
-    "yoga_embeddings.pkl",
-    "/app/yoga_embeddings.pkl",
-    os.path.join(os.path.dirname(__file__), "yoga_embeddings.pkl")
-]
+@lru_cache(maxsize=1)
+def get_model():
+    return SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
-df = None
-for path in pkl_paths:
-    try:
-        if os.path.exists(path):
-            with open(path, "rb") as f:
-                df = pickle.load(f)
-            print(f"✓ Loaded yoga embeddings from {path}: {df.shape[0]} poses")
-            print(f"✓ Columns: {df.columns.tolist()}")
-            break
-    except Exception as e:
-        print(f"Could not load from {path}: {e}")
+# --------------------------------------------------
+# Load embeddings ONCE (no pandas at runtime)
+# --------------------------------------------------
 
-if df is None:
-    print("WARNING: Could not load yoga_embeddings.pkl from any path")
-    print(f"Current working directory: {os.getcwd()}")
-    print(f"Files in current directory: {os.listdir('.')}")
+PKL_PATH = os.path.join(os.path.dirname(__file__), "yoga_embeddings.pkl")
+
+with open(PKL_PATH, "rb") as f:
+    df = pickle.load(f)
+
+POSE_NAMES = df["AName"].tolist()
+BENEFITS = df["Benefits"].tolist()
+CONTRA = df["Contraindications"].fillna("").tolist()
+BENEFITS_EMB = np.vstack(df["Benefits_emb"].values)
+
+print(f"Loaded {len(POSE_NAMES)} yoga poses")
+
+# --------------------------------------------------
+# Request models
+# --------------------------------------------------
 
 class UserInput(BaseModel):
     age: int
@@ -65,147 +64,128 @@ class UserInput(BaseModel):
     mental_issues: List[str]
     level: str
 
-@app.on_event("startup")
-async def startup_event():
-    print("FastAPI startup event triggered")
-    print(f"Embeddings loaded: {df is not None}")
-    if df is not None:
-        print(f"Number of poses: {df.shape[0]}")
-    print("Server ready to accept requests")
-
-def recommend_asanas(user_profile):
-    user_emb = {
-        "goals": model.encode(" ".join(user_profile["goals"]), normalize_embeddings=True),
-        "physical_issues": model.encode(" ".join(user_profile["physical_issues"]), normalize_embeddings=True),
-        "mental_issues": model.encode(" ".join(user_profile["mental_issues"]), normalize_embeddings=True),
-    }
-
-    recommendations = []
-    weights = {
-        "goals_benefits": 4,
-        "physical_benefits": 4,
-        "mental_benefits": 4,
-        "physical_match": 2,
-        "mental_match": 2,
-    }
-    total_weight = sum(weights.values())
-
-    for _, row in df.iterrows():
-        score = 0.0
-        contra_text = str(row["Contraindications"]).lower()
-
-        discard = False
-        for issue in user_profile["physical_issues"] + user_profile["mental_issues"]:
-            issue = issue.lower()
-            if issue in contra_text:
-                discard = True
-                break
-            if util.cos_sim(model.encode(issue, normalize_embeddings=True), row["Contraindications_emb"]).item() > 0.25:
-                discard = True
-                break
-        if discard:
-            continue
-
-        score += weights["goals_benefits"] * util.cos_sim(user_emb["goals"], row["Benefits_emb"]).item()
-        score += weights["physical_benefits"] * util.cos_sim(user_emb["physical_issues"], row["Benefits_emb"]).item()
-        score += weights["mental_benefits"] * util.cos_sim(user_emb["mental_issues"], row["Benefits_emb"]).item()
-
-        score += weights["physical_match"] * util.cos_sim(user_emb["physical_issues"], row["Targeted Physical Problems_emb"]).item()
-        score += weights["mental_match"] * util.cos_sim(user_emb["mental_issues"], row["Targeted Mental Problems_emb"]).item()
-
-        score /= total_weight
-
-        if score > 0:
-            recommendations.append({
-                "name": row["AName"],
-                "score": round(score, 3),
-                "benefits": row["Benefits"],
-                "contraindications": row["Contraindications"]
-            })
-
-    recommendations = sorted(recommendations, key=lambda x: x["score"], reverse=True)
-    return recommendations[:10]
-
-@app.post("/recommend/")
-async def get_recommendations(user_input: UserInput):
-    user_profile = user_input.dict()
-    recommended_asanas = recommend_asanas(user_profile)
-    return {"recommended_asanas": recommended_asanas}
-
-
-# ============ RAG CHATBOT ENDPOINT ============
-
 class ChatRequest(BaseModel):
     message: str
 
 class ChatResponse(BaseModel):
     response: str
 
-@app.post("/chat/")
+# --------------------------------------------------
+# Recommendation logic (bounded + memory safe)
+# --------------------------------------------------
+
+def recommend_asanas(user_profile):
+    model = get_model()
+
+    query_text = " ".join(
+        user_profile["goals"]
+        + user_profile["physical_issues"]
+        + user_profile["mental_issues"]
+    )
+
+    query_emb = model.encode(query_text, normalize_embeddings=True)
+    sims = np.dot(BENEFITS_EMB, query_emb)
+
+    top_idx = np.argsort(sims)[::-1][:10]
+
+    results = []
+    for i in top_idx:
+        if sims[i] > 0:
+            results.append({
+                "name": POSE_NAMES[i],
+                "score": round(float(sims[i]), 3),
+                "benefits": BENEFITS[i],
+                "contraindications": CONTRA[i]
+            })
+
+    del query_emb, sims
+    gc.collect()
+
+    return results
+
+@app.post("/recommend/")
+async def get_recommendations(user_input: UserInput):
+    return {"recommended_asanas": recommend_asanas(user_input.dict())}
+
+# --------------------------------------------------
+# Conversational RAG architecture
+# --------------------------------------------------
+
+SYSTEM_PROMPT = """
+You are a calm, professional yoga instructor and assistant.
+
+Your role:
+- Hold a natural, conversational dialogue.
+- Explain yoga concepts clearly and accessibly.
+- Use provided yoga knowledge when relevant.
+- Answer general yoga questions even if no poses are referenced.
+- Prioritize safety and clarity.
+
+Rules:
+- Mention contraindications when poses or injuries are discussed.
+- If the knowledge section is empty or irrelevant, answer from general yoga understanding.
+- Do not provide medical diagnoses.
+- Keep responses concise and helpful (3–6 sentences).
+"""
+
+def retrieve_context(query: str, k: int = 5) -> str:
+    model = get_model()
+
+    query_emb = model.encode(query, normalize_embeddings=True)
+    sims = np.dot(BENEFITS_EMB, query_emb)
+
+    top_idx = np.argsort(sims)[::-1][:k]
+
+    context_blocks = []
+    for i in top_idx:
+        if sims[i] > 0.15:
+            context_blocks.append(
+                f"Pose: {POSE_NAMES[i]}\n"
+                f"Benefits: {BENEFITS[i]}\n"
+                f"Contraindications: {CONTRA[i]}"
+            )
+
+    del query_emb, sims
+    return "\n\n".join(context_blocks)
+
+@app.post("/chat/", response_model=ChatResponse)
 async def chat(request: ChatRequest):
-    """RAG-based yoga chatbot using yoga_embeddings.pkl"""
     try:
-        # 1. ENCODE QUERY
-        query_embedding = model.encode(request.message, normalize_embeddings=True)
-        
-        # 2. SEARCH YOGA EMBEDDINGS FOR SIMILAR POSES
-        similarities = []
-        for idx, row in df.iterrows():
-            # Search using Benefits embedding for relevance
-            sim_score = float(np.dot(query_embedding, row["Benefits_emb"]))
-            pose_info = {
-                "name": row["AName"],
-                "benefits": row["Benefits"],
-                "contraindications": row.get("Contraindications", "None"),
-                "score": sim_score
-            }
-            similarities.append(pose_info)
-        
-        # Get top 5 most relevant poses
-        top_poses = sorted(similarities, key=lambda x: x["score"], reverse=True)[:5]
-        
-        if not top_poses or top_poses[0]["score"] < 0.1:
-            return ChatResponse(response="I couldn't find relevant yoga information for that question. Try asking about specific poses or yoga benefits.")
-        
-        # 3. BUILD CONTEXT FROM RETRIEVED POSES
-        context = "Here are relevant yoga poses from the knowledge base:\n\n"
-        for pose in top_poses:
-            context += f"- {pose['name']}\n"
-            context += f"  Benefits: {pose['benefits']}\n"
-            context += f"  Contraindications: {pose['contraindications']}\n\n"
-        
-        # 4. BUILD SYSTEM PROMPT
-        system_prompt = """You are a professional yoga instructor with deep knowledge of yoga poses and their benefits.
-Answer questions based on the provided yoga knowledge base.
-Be specific, practical, and always prioritize safety.
-Always mention contraindications when relevant.
-Keep responses concise (2-3 sentences typically)."""
-        
-        # 5. GENERATE RESPONSE WITH GEMINI
-        full_prompt = f"""{system_prompt}
+        query = request.message.strip()
+        context = retrieve_context(query)
 
-KNOWLEDGE BASE:
-{context}
+        prompt = f"""
+{SYSTEM_PROMPT}
 
-User Question: {request.message}
+Yoga Knowledge (may be empty):
+{context if context else "No specific pose data retrieved."}
 
-Provide a helpful answer based on the knowledge base."""
-        
-        genai_model = genai.GenerativeModel("gemini-2.0-flash")
-        response = genai_model.generate_content(full_prompt)
-        
-        return ChatResponse(response=response.text or "Unable to generate response. Please try again.")
-        
+User: {query}
+Instructor:
+"""
+
+        response = genai.GenerativeModel(
+            "gemini-2.0-flash"
+        ).generate_content(prompt)
+
+        gc.collect()
+
+        return ChatResponse(response=response.text)
+
     except Exception as e:
-        print(f"Chat error: {str(e)}")
-        return ChatResponse(response=f"Sorry, an error occurred: {str(e)}")
+        print(f"Chat error: {e}")
+        return ChatResponse(
+            response="I ran into an issue while answering. Please try again."
+        )
+
+# --------------------------------------------------
+# Health endpoint
+# --------------------------------------------------
 
 @app.get("/health")
 async def health():
     return {
         "status": "ok",
-        "service": "yoga-backend",
-        "embeddings_loaded": df is not None,
-        "api_key_configured": bool(os.getenv("GOOGLE_API_KEY"))
+        "poses_loaded": len(POSE_NAMES),
+        "model_loaded": True
     }
-

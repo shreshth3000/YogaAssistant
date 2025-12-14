@@ -113,6 +113,9 @@
         <action
             android:id="@+id/action_inside1Fragment_to_exploreFragment"
             app:destination="@id/exploreFragment" />
+        <action
+            android:id="@+id/action_inside1Fragment_to_chatbotFragment"
+            app:destination="@id/chatbotFragment" />
     </fragment>
 
     <fragment

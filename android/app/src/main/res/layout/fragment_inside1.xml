@@ -561,6 +561,19 @@
 
     </ScrollView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabChatbot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="Open AI Chatbot"
+        android:src="@drawable/ic_chat"
+        app:backgroundTint="@color/primary_600"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@id/footer_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
     <!-- Modern Glass Footer Navigation -->
     <LinearLayout
         android:id="@+id/footer_container"

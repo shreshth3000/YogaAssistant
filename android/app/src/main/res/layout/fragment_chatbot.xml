@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradient_background">
+    android:background="@color/background_color">
 
     <!-- Header -->
     <LinearLayout
@@ -14,26 +14,26 @@
         android:gravity="center_vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:background="@drawable/gradient_background">
+        android:background="@color/background_color">
 
         <ImageButton
             android:id="@+id/backButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_back"
+            android:src="@drawable/ic_arrow_back"
             android:contentDescription="Back"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
-            android:tint="@color/white" />
+            android:tint="@color/text_primary" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Yoga Assistant"
+            android:text="YogaBot"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/text_primary"
             android:paddingStart="16dp" />
 
     </LinearLayout>
@@ -79,9 +79,9 @@
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:textSize="14sp"
-            android:textColorHint="#99FFFFFF"
-            android:textColor="@color/white"
-            android:background="@drawable/rounded_edittext_chatbot"
+            android:textColorHint="@color/text_secondary"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/input_background_rounded"
             android:inputType="text"
             android:imeOptions="actionSend" />
 
@@ -90,9 +90,9 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
-            android:src="@drawable/ic_send"
+            android:src="@drawable/ic_arrow_forward"
             android:contentDescription="Send"
-            android:background="@drawable/rounded_button_chatbot"
+            android:background="@drawable/neumorphic_button_primary"
             android:tint="@color/white"
             android:scaleType="centerInside" />
 
