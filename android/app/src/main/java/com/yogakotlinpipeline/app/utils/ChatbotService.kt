@@ -11,7 +11,7 @@ class ChatbotService {
     companion object {
         private const val TAG = "ChatbotService"
         // Update this to your backend URL after deployment
-        private const val BASE_URL = "https://yoga-backend-xxxxx.run.app/"
+        private const val BASE_URL = "https://yoga-recommender-chat-692893069544.europe-west1.run.app/"
         
         @Volatile
         private var INSTANCE: ChatbotService? = null

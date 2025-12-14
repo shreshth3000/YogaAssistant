@@ -16,7 +16,7 @@ class NetworkService {
         // This is the same backend as ChatbotService (handles /recommend/ and /chat/)
         // Format: https://yoga-backend-{service-id}.run.app/
         // After deploying to Cloud Run, update this to your service URL
-        private const val BASE_URL = "https://yoga-backend-xxxxx.run.app/"
+        private const val BASE_URL = "https://yoga-recommender-chat-692893069544.europe-west1.run.app/"
         private const val MAX_CACHE_SIZE = 10 // Limit cache entries to prevent memory leaks
         
         @Volatile

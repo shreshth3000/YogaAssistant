@@ -10,13 +10,26 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+print("Starting Yoga Backend...")
+print(f"Python version: {__import__('sys').version}")
+print(f"Current working directory: {os.getcwd()}")
+print(f"Files in current directory: {os.listdir('.')}")
+
 app = FastAPI(title="Yoga Backend", version="1.0")
 
+print("Initializing Generative AI...")
 # Initialize Generative AI
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY", ""))
+api_key = os.getenv("GOOGLE_API_KEY", "")
+if api_key:
+    print("API Key found, configuring genai...")
+    genai.configure(api_key=api_key)
+else:
+    print("WARNING: GOOGLE_API_KEY not set")
 
+print("Loading SentenceTransformer model...")
 # Load embeddings
 model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+print("SentenceTransformer model loaded")
 
 # Try multiple paths for yoga_embeddings.pkl
 import os
@@ -51,6 +64,14 @@ class UserInput(BaseModel):
     physical_issues: List[str]
     mental_issues: List[str]
     level: str
+
+@app.on_event("startup")
+async def startup_event():
+    print("FastAPI startup event triggered")
+    print(f"Embeddings loaded: {df is not None}")
+    if df is not None:
+        print(f"Number of poses: {df.shape[0]}")
+    print("Server ready to accept requests")
 
 def recommend_asanas(user_profile):
     user_emb = {
