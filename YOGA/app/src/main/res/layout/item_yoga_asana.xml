@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/asana_card_background"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/tv_difficulty_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beginner"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter_semibold"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_asana_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asana Name"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:fontFamily="@font/inter_bold"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tv_sanskrit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sanskrit Name"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter_regular"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_asana_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/asana_image_background"
+        android:clipToOutline="true"
+        android:contentDescription="Yoga Asana Image" />
+
+</LinearLayout>

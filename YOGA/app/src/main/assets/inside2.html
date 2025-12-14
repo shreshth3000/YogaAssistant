@@ -1,0 +1,136 @@
+<html><head>
+    <meta charset="utf-8"/>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+          :root {
+            --primary-color: #7a3df5;
+            --secondary-color: #f0e9ff;
+            --text-primary: #120d1c;
+            --text-secondary: #6B7280;
+            --background-color: #f9f8fc;
+          }
+          .active-filter {
+            @apply bg-[var(--primary-color)] text-white;
+          }
+          .inactive-filter {
+            @apply bg-[var(--secondary-color)] text-[var(--text-primary)];
+          }
+        </style>
+    <style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+      </style>
+      </head>
+    <body class="bg-[var(--background-color)]" style='font-family: Inter, "Noto Sans", sans-serif;'>
+    <div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden">
+    <div class="flex-grow">
+    <header class="sticky top-0 z-10 bg-[var(--background-color)]/80 backdrop-blur-sm">
+    <div class="flex items-center p-4 pb-2 justify-between">
+    <button class="flex items-center justify-center h-10 w-10 rounded-full">
+    <span class="material-symbols-outlined text-[var(--text-primary)]">menu</span>
+    </button>
+    <h1 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Yoga Asanas</h1>
+    <button class="flex items-center justify-center h-10 w-10 rounded-full">
+    <span class="material-symbols-outlined text-[var(--text-primary)]">search</span>
+    </button>
+    </div>
+    <div class="px-4 py-3">
+    <label class="flex flex-col min-w-40 h-12 w-full">
+    <div class="relative flex w-full flex-1 items-stretch rounded-full h-full">
+    <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+    <span class="material-symbols-outlined text-[var(--text-secondary)]">search</span>
+    </div>
+    <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-[var(--text-primary)] focus:outline-0 focus:ring-2 focus:ring-[var(--primary-color)] border border-gray-200 bg-white h-full placeholder:text-[var(--text-secondary)] pl-12 pr-4 text-base font-normal leading-normal" placeholder="Search asanas or categories" value=""/>
+    </div>
+    </label>
+    </div>
+    <div class="flex gap-3 px-4 py-3 overflow-x-auto whitespace-nowrap">
+    <div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full px-4 active-filter">
+    <p class="text-sm font-medium">All</p>
+    </div>
+    <div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full px-4 inactive-filter">
+    <p class="text-sm font-medium">Beginner</p>
+    </div>
+    <div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full px-4 inactive-filter">
+    <p class="text-sm font-medium">Intermediate</p>
+    </div>
+    <div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full px-4 inactive-filter">
+    <p class="text-sm font-medium">Advanced</p>
+    </div>
+    <div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full px-4 inactive-filter">
+    <p class="text-sm font-medium">Restorative</p>
+    </div>
+    </div>
+    </header>
+    <main class="px-4 pb-24">
+    <h2 class="text-[var(--text-primary)] text-2xl font-bold leading-tight tracking-tight pt-5 pb-4">Popular Asanas</h2>
+    <div class="grid grid-cols-1 gap-4">
+    <div class="flex items-center justify-between gap-4 rounded-2xl bg-white p-4 shadow-sm hover:shadow-lg transition-shadow duration-300">
+    <div class="flex flex-col gap-1 flex-1">
+    <p class="text-[var(--primary-color)] text-sm font-semibold leading-normal">Beginner</p>
+    <p class="text-[var(--text-primary)] text-lg font-bold leading-tight">Mountain Pose</p>
+    <p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">Tadasana</p>
+    </div>
+    <div class="w-24 h-24 bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex-shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLtTI_t9Dc75_0JPWdtCZ2Sk7t6P0i18PBhd5mxf9CUPrSx0OzrRa4hEeVDQMGSzR8wDdrKyWAfPqWELBToLv3kF1LWRocsUDUYqwERiuoZbsPddM-zMEuvu6h-TDpqFsx4I9NOXM7xLOEfiC5TCOx80puu5kTfYtCah7TPZDfO3GUHUkJBtrzfxc6WvLPbAa-dQ-PlAY7cfziVUppZviFl8yLZuFsf8WKZqM9bsgWovj9R_FZy5TqGwbQDbv28uIP3Swu6HEelKPo");'></div>
+    </div>
+    <div class="flex items-center justify-between gap-4 rounded-2xl bg-white p-4 shadow-sm hover:shadow-lg transition-shadow duration-300">
+    <div class="flex flex-col gap-1 flex-1">
+    <p class="text-[var(--primary-color)] text-sm font-semibold leading-normal">Beginner</p>
+    <p class="text-[var(--text-primary)] text-lg font-bold leading-tight">Downward-Facing Dog</p>
+    <p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">Adho Mukha Svanasana</p>
+    </div>
+    <div class="w-24 h-24 bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex-shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBR6bF2pJ-Ygs10HDbFLvvpXb7j8F2LSVR0e3dbU6pmCG7IBjiRr9PhUznZG4EA8rsC5cAD_N6rUGKhVd766bQGmDw4sFyUDQvp04h9yEuDtn_Ag93qzQb_5BKaOM5HU8FyDKFAja57PU4c5FaPRg0tEYcWqtlEn5cAgc3wTggnJeOFA95IgiKNbsbMiuhli3w3NOVr7-aQfMGROpWd1f87_i3_kB7-WNwkeTRj7OyVU9sgylq67solEL5S0wi_s69gp13FelzrOGEO");'></div>
+    </div>
+    <div class="flex items-center justify-between gap-4 rounded-2xl bg-white p-4 shadow-sm hover:shadow-lg transition-shadow duration-300">
+    <div class="flex flex-col gap-1 flex-1">
+    <p class="text-[var(--primary-color)] text-sm font-semibold leading-normal">Intermediate</p>
+    <p class="text-[var(--text-primary)] text-lg font-bold leading-tight">Warrior II</p>
+    <p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">Virabhadrasana II</p>
+    </div>
+    <div class="w-24 h-24 bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex-shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD28QBfd8sPvh0kHHfRRRM-oWlEZ4mK4mz7boIP-VWUGhDK-lmdNoq9bAUB6_dbA6o2LL6qvy1D10plDh3Zt1RPb0Ct0LTKEYwL2KRnHVvrsKI6xfa8mqCjq_qDhddVTb4RuARl4Ke5iXCy9eKG6HnzZrZ_jOKutWLUwXQEn9cSNzxLErBtcg6hWDSRp7WMEzs1gF5luiTY_RTPFD6z_gXehpi0P4oiQmqtHC8_2QSY3vWQefV_WoFPxR-b19cVFqc_0-qqV_yranUV");'></div>
+    </div>
+    <div class="flex items-center justify-between gap-4 rounded-2xl bg-white p-4 shadow-sm hover:shadow-lg transition-shadow duration-300">
+    <div class="flex flex-col gap-1 flex-1">
+    <p class="text-[var(--primary-color)] text-sm font-semibold leading-normal">Intermediate</p>
+    <p class="text-[var(--text-primary)] text-lg font-bold leading-tight">Triangle Pose</p>
+    <p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">Trikonasana</p>
+    </div>
+    <div class="w-24 h-24 bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex-shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHov83pam1RCoNo4shiKXzSdOjSX7dqmsiEjulKtM-LXel7ciLDLTkGscMnENAdlrZz_V6M6BJIrgFHCUSeXFiruw6x09u2yI6m9cjkRTL35eILy1qnXBaylwjPx88hk-M1BxO1Y5t7ysAvJ4bIzBAwwrPxpfh5UW1XB9b5Vyjg1kQ9vW4eCBgwVKaFhl-rfSV0xCOayeyDEKbGAZ1HR1lSQ_CmewTr_kxR7X32aJOfy91-YPJA49QayeNGh7HgRlTgf6FiNJSTU1g");'></div>
+    </div>
+    </div>
+    </main>
+    </div>
+    <footer class="fixed bottom-0 left-0 right-0 bg-[var(--background-color)]/90 backdrop-blur-sm border-t border-gray-200">
+    <div class="flex justify-around py-2 px-4">
+    <a class="flex flex-col items-center justify-center gap-1 text-[var(--primary-color)]" href="#">
+    <span class="material-symbols-outlined">home</span>
+    <p class="text-xs font-medium">Home</p>
+    </a>
+    <a class="flex flex-col items-center justify-center gap-1 text-[var(--text-secondary)]" href="#">
+    <span class="material-symbols-outlined">view_timeline</span>
+    <p class="text-xs font-medium">Flows</p>
+    </a>
+    <a class="flex flex-col items-center justify-center gap-1 text-[var(--text-secondary)]" href="#">
+    <span class="material-symbols-outlined">star</span>
+    <p class="text-xs font-medium">Explore</p>
+    </a>
+    <a class="flex flex-col items-center justify-center gap-1 text-[var(--text-secondary)]" href="#">
+    <span class="material-symbols-outlined">leaderboard</span>
+    <p class="text-xs font-medium">Progress</p>
+    </a>
+    <a class="flex flex-col items-center justify-center gap-1 text-[var(--text-secondary)]" href="#">
+    <span class="material-symbols-outlined">person</span>
+    <p class="text-xs font-medium">Profile</p>
+    </a>
+    </div>
+    <div class="h-safe-area-bottom bg-transparent"></div>
+    </footer>
+    </div>
+    
+    </body></html>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboarding1Fragment">
+
+    <fragment
+        android:id="@+id/onboarding1Fragment"
+        android:name="com.yogakotlinpipeline.app.Onboarding1Fragment"
+        android:label="Onboarding1Fragment"
+        tools:layout="@layout/fragment_onboarding1">
+        <action
+            android:id="@+id/action_onboarding1Fragment_to_onboarding2Fragment"
+            app:destination="@id/onboarding2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboarding2Fragment"
+        android:name="com.yogakotlinpipeline.app.Onboarding2Fragment"
+        android:label="Onboarding2Fragment"
+        tools:layout="@layout/fragment_onboarding2">
+        <action
+            android:id="@+id/action_onboarding2Fragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_onboarding2Fragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.yogakotlinpipeline.app.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_preference1Fragment"
+            app:destination="@id/preference1Fragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_inside1Fragment"
+            app:destination="@id/inside1Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.yogakotlinpipeline.app.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/preference1Fragment"
+        android:name="com.yogakotlinpipeline.app.Preference1Fragment"
+        android:label="Preference1Fragment"
+        tools:layout="@layout/fragment_preference1">
+        <action
+            android:id="@+id/action_preference1Fragment_to_preference2Fragment"
+            app:destination="@id/preference2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/preference2Fragment"
+        android:name="com.yogakotlinpipeline.app.Preference2Fragment"
+        android:label="Preference2Fragment"
+        tools:layout="@layout/fragment_preference2">
+        <action
+            android:id="@+id/action_preference2Fragment_to_preference3Fragment"
+            app:destination="@id/preference3Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/preference3Fragment"
+        android:name="com.yogakotlinpipeline.app.Preference3Fragment"
+        android:label="Preference3Fragment"
+        tools:layout="@layout/fragment_preference3">
+        <action
+            android:id="@+id/action_preference3Fragment_to_inside1Fragment"
+            app:destination="@id/inside1Fragment" />
+        <action
+            android:id="@+id/action_preference3Fragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Inside Screens -->
+    <fragment
+        android:id="@+id/inside1Fragment"
+        android:name="com.yogakotlinpipeline.app.Inside1Fragment"
+        android:label="Inside1Fragment"
+        tools:layout="@layout/fragment_inside1">
+        <action
+            android:id="@+id/action_inside1Fragment_to_inside2Fragment"
+            app:destination="@id/inside2Fragment" />
+        <action
+            android:id="@+id/action_inside1Fragment_to_inside3Fragment"
+            app:destination="@id/inside3Fragment" />
+        <action
+            android:id="@+id/action_inside1Fragment_to_inside4Fragment"
+            app:destination="@id/inside4Fragment" />
+        <action
+            android:id="@+id/action_inside1Fragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_inside1Fragment_to_poseDetectionFragment"
+            app:destination="@id/poseDetectionFragment" />
+        <action
+            android:id="@+id/action_inside1Fragment_to_exploreFragment"
+            app:destination="@id/exploreFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inside2Fragment"
+        android:name="com.yogakotlinpipeline.app.Inside2Fragment"
+        android:label="Inside2Fragment"
+        tools:layout="@layout/fragment_inside2">
+        <action
+            android:id="@+id/action_inside2Fragment_to_inside1Fragment"
+            app:destination="@id/inside1Fragment" />
+        <action
+            android:id="@+id/action_inside2Fragment_to_inside3Fragment"
+            app:destination="@id/inside3Fragment" />
+        <action
+            android:id="@+id/action_inside2Fragment_to_inside4Fragment"
+            app:destination="@id/inside4Fragment" />
+        <action
+            android:id="@+id/action_inside2Fragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_inside2Fragment_to_poseCalibrationFragment"
+            app:destination="@id/poseCalibrationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inside3Fragment"
+        android:name="com.yogakotlinpipeline.app.Inside3Fragment"
+        android:label="Inside3Fragment"
+        tools:layout="@layout/fragment_inside3">
+        <action
+            android:id="@+id/action_inside3Fragment_to_inside1Fragment"
+            app:destination="@id/inside1Fragment" />
+        <action
+            android:id="@+id/action_inside3Fragment_to_inside2Fragment"
+            app:destination="@id/inside2Fragment" />
+        <action
+            android:id="@+id/action_inside3Fragment_to_inside4Fragment"
+            app:destination="@id/inside4Fragment" />
+        <action
+            android:id="@+id/action_inside3Fragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inside4Fragment"
+        android:name="com.yogakotlinpipeline.app.Inside4Fragment"
+        android:label="Inside4Fragment"
+        tools:layout="@layout/fragment_inside4">
+        <action
+            android:id="@+id/action_inside4Fragment_to_inside1Fragment"
+            app:destination="@id/inside1Fragment" />
+        <action
+            android:id="@+id/action_inside4Fragment_to_inside2Fragment"
+            app:destination="@id/inside2Fragment" />
+        <action
+            android:id="@+id/action_inside4Fragment_to_inside3Fragment"
+            app:destination="@id/inside3Fragment" />
+        <action
+            android:id="@+id/action_inside4Fragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <!-- Profile Fragment -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.yogakotlinpipeline.app.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_inside1Fragment"
+            app:destination="@id/inside1Fragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_inside2Fragment"
+            app:destination="@id/inside2Fragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_inside3Fragment"
+            app:destination="@id/inside3Fragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_inside4Fragment"
+            app:destination="@id/inside4Fragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_profileFragment_to_preference1Fragment"
+            app:destination="@id/preference1Fragment" />
+    </fragment>
+
+    <!-- Explore Fragment -->
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.yogakotlinpipeline.app.ExploreFragment"
+        android:label="ExploreFragment"
+        tools:layout="@layout/fragment_explore">
+        <action
+            android:id="@+id/action_exploreFragment_to_inside1Fragment"
+            app:destination="@id/inside1Fragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_inside2Fragment"
+            app:destination="@id/inside2Fragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_inside3Fragment"
+            app:destination="@id/inside3Fragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_inside4Fragment"
+            app:destination="@id/inside4Fragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_youtubeVideoFragment"
+            app:destination="@id/youtubeVideoFragment" />
+    </fragment>
+
+    <!-- YouTube Video Fragment -->
+    <fragment
+        android:id="@+id/youtubeVideoFragment"
+        android:name="com.yogakotlinpipeline.app.YoutubeVideoFragment"
+        android:label="YoutubeVideoFragment"
+        tools:layout="@layout/fragment_youtube_video">
+        <argument
+            android:name="pose_name"
+            app:argType="string"
+            android:defaultValue="Dandasana" />
+        <argument
+            android:name="pose_display_name"
+            app:argType="string"
+            android:defaultValue="Staff Pose" />
+        <argument
+            android:name="pose_description"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="pose_difficulty"
+            app:argType="string"
+            android:defaultValue="Beginner" />
+        <action
+            android:id="@+id/action_youtubeVideoFragment_to_inside1Fragment"
+            app:destination="@id/inside1Fragment" />
+        <action
+            android:id="@+id/action_youtubeVideoFragment_to_inside3Fragment"
+            app:destination="@id/inside3Fragment" />
+        <action
+            android:id="@+id/action_youtubeVideoFragment_to_inside4Fragment"
+            app:destination="@id/inside4Fragment" />
+        <action
+            android:id="@+id/action_youtubeVideoFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_youtubeVideoFragment_to_poseCalibrationFragment"
+            app:destination="@id/poseCalibrationFragment" />
+    </fragment>
+
+    <!-- Pose Detection Fragment -->
+    <fragment
+        android:id="@+id/poseDetectionFragment"
+        android:name="com.yogakotlinpipeline.app.PoseDetectionFragment"
+        android:label="PoseDetectionFragment"
+        tools:layout="@layout/fragment_pose_detection">
+        <argument
+            android:name="pose_name"
+            app:argType="string"
+            android:defaultValue="Dandasana" />
+    </fragment>
+
+    <!-- Pose Calibration Fragment -->
+    <fragment
+        android:id="@+id/poseCalibrationFragment"
+        android:name="com.yogakotlinpipeline.app.PoseCalibrationFragment"
+        android:label="PoseCalibrationFragment"
+        tools:layout="@layout/fragment_pose_calibration">
+        <argument
+            android:name="pose_name"
+            app:argType="string"
+            android:defaultValue="Dandasana" />
+        <action
+            android:id="@+id/action_poseCalibrationFragment_to_inside1Fragment"
+            app:destination="@id/inside1Fragment" />
+        <action
+            android:id="@+id/action_poseCalibrationFragment_to_inside2Fragment"
+            app:destination="@id/inside2Fragment" />
+        <action
+            android:id="@+id/action_poseCalibrationFragment_to_inside3Fragment"
+            app:destination="@id/inside3Fragment" />
+        <action
+            android:id="@+id/action_poseCalibrationFragment_to_inside4Fragment"
+            app:destination="@id/inside4Fragment" />
+        <action
+            android:id="@+id/action_poseCalibrationFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <!-- Chatbot Fragment (Auth Protected) -->
+    <fragment
+        android:id="@+id/chatbotFragment"
+        android:name="com.yogakotlinpipeline.app.ChatbotFragment"
+        android:label="ChatbotFragment"
+        tools:layout="@layout/fragment_chatbot">
+        <action
+            android:id="@+id/action_chatbotFragment_to_inside1Fragment"
+            app:destination="@id/inside1Fragment"
+            app:popUpTo="@id/inside1Fragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+</navigation>
+

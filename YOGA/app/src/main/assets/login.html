@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yoga Assistant - Log In</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #7a3df5;
+      --background-color: #f9f8fc;
+      --text-primary: #120d1c;
+      --text-secondary: #65499c;
+      --input-bg: #ebe7f4;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-color)]">
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center p-4">
+<button class="text-[var(--text-primary)]">
+<span class="material-symbols-outlined text-3xl">
+          arrow_back_ios_new
+        </span>
+</button>
+</header>
+<main class="flex-grow flex flex-col justify-center px-6">
+<div class="text-center mb-10">
+<h1 class="text-[var(--text-primary)] text-3xl font-bold tracking-tight">Welcome Back</h1>
+<p class="text-[var(--text-secondary)] mt-2">Log in to continue your yoga journey.</p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="sr-only" for="email">Email or username</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-secondary)]">
+              person
+            </span>
+<input class="form-input w-full rounded-xl border-none bg-[var(--input-bg)] h-14 pl-12 pr-4 text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-opacity-50 transition duration-200" id="email" placeholder="Email or username" type="email"/>
+</div>
+</div>
+<div>
+<label class="sr-only" for="password">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-secondary)]">
+              lock
+            </span>
+<input class="form-input w-full rounded-xl border-none bg-[var(--input-bg)] h-14 pl-12 pr-4 text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-opacity-50 transition duration-200" id="password" placeholder="Password" type="password"/>
+</div>
+</div>
+<div class="text-right">
+<a class="text-sm font-medium text-[var(--primary-color)] hover:underline" href="#">Forgot password?</a>
+</div>
+<button class="w-full h-14 bg-[var(--primary-color)] text-white font-bold rounded-xl hover:bg-opacity-90 transition-colors duration-300 shadow-lg shadow-[var(--primary-color)]/30" type="submit">
+          Log In
+        </button>
+</form>
+</main>
+<footer class="py-8 px-6 text-center">
+<p class="text-[var(--text-secondary)]">
+        Don't have an account? 
+        <a class="font-bold text-[var(--primary-color)] hover:underline" href="#">Sign up</a>
+</p>
+</footer>
+</div>
+
+</body></html>

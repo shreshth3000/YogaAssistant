@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-50: #f4effd;
+      --primary-100: #e8dffc;
+      --primary-200: #d7cefa;
+      --primary-500: #9373f3;
+      --primary-600: #7a3df5;
+      --primary-700: #65499c;
+      --neutral-50: #f9f8fc;
+      --neutral-100: #f1f0f7;
+      --neutral-200: #ebe7f4;
+      --neutral-800: #3a2d53;
+      --neutral-900: #120d1c;
+      --success-500: #16a34a;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--neutral-50)] text-[var(--neutral-900)]">
+<div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden">
+<div class="flex-grow">
+<header class="flex items-center justify-between p-4 sticky top-0 bg-[var(--neutral-50)]/80 backdrop-blur-sm z-10">
+<button class="flex size-10 items-center justify-center rounded-full text-[var(--neutral-800)] hover:bg-[var(--neutral-100)] transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold">Progress</h1>
+<div class="size-10"></div>
+</header>
+<main class="p-4">
+<section class="flex items-center gap-4 mb-8">
+<div class="flex-shrink-0">
+<img alt="Sophia's profile picture" class="size-20 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClSisk3GUN1klp2-J6C_AgE2Sg3f4vgTtBCHfcl1TBd0kLCIOeupXvo--Zv5bLMGx74aBI8NtwRlgR1nyIFN5hTSIKr2n35CuyXFogxuMcrujgc66tXlu-_74AaamSUJXTczryeMF0yxODxWKKp6qZUsynxxDeoISVVCApifrKPeZgS3yrxU14qYKxwcZxx-AD1tVFEUqFjsudC3hSALw26Dr5cNVGk24xOx90nasf1vLZAWnG0P-qEFOm6L8gAz10_DcHfNCLk2Ce"/>
+</div>
+<div>
+<p class="text-xl font-bold">Sophia</p>
+<p class="text-[var(--primary-700)]">Yoga Enthusiast</p>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="text-xl font-bold mb-4">Weekly Summary</h2>
+<div class="rounded-2xl bg-white p-4 shadow-sm">
+<div class="flex items-baseline justify-between mb-2">
+<div>
+<p class="text-base font-medium text-[var(--neutral-800)]">Workouts</p>
+<p class="text-4xl font-bold">5</p>
+</div>
+<div class="flex items-center gap-1">
+<p class="text-[var(--primary-700)] text-sm">This Week</p>
+<p class="text-[var(--success-500)] text-sm font-medium flex items-center">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+                  20%
+                </p>
+</div>
+</div>
+<div class="grid h-40 grid-cols-7 gap-3 items-end justify-items-center">
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="bg-[var(--primary-200)] w-full rounded-full transition-all duration-500" style="height: 90%;"></div>
+<p class="text-[var(--primary-700)] text-xs font-medium">Mon</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="bg-[var(--primary-200)] w-full rounded-full transition-all duration-500" style="height: 30%;"></div>
+<p class="text-[var(--primary-700)] text-xs font-medium">Tue</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="bg-[var(--primary-600)] w-full rounded-full transition-all duration-500" style="height: 80%;"></div>
+<p class="text-[var(--primary-700)] text-xs font-bold">Wed</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="bg-[var(--primary-200)] w-full rounded-full transition-all duration-500" style="height: 70%;"></div>
+<p class="text-[var(--primary-700)] text-xs font-medium">Thu</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="bg-[var(--primary-200)] w-full rounded-full transition-all duration-500" style="height: 60%;"></div>
+<p class="text-[var(--primary-700)] text-xs font-medium">Fri</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="bg-[var(--primary-200)] w-full rounded-full transition-all duration-500" style="height: 70%;"></div>
+<p class="text-[var(--primary-700)] text-xs font-medium">Sat</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="bg-[var(--primary-200)] w-full rounded-full transition-all duration-500" style="height: 50%;"></div>
+<p class="text-[var(--primary-700)] text-xs font-medium">Sun</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="text-xl font-bold mb-4">Streaks</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col items-center justify-center gap-2 rounded-2xl p-6 bg-white shadow-sm text-center">
+<p class="text-6xl">Progress</p>
+<p class="text-lg font-bold text-[var(--neutral-900)]">7 Days</p>
+<p class="text-sm text-[var(--primary-700)]">Current Streak</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-2 rounded-2xl p-6 bg-white shadow-sm text-center">
+<p class="text-6xl">Achievement</p>
+<p class="text-lg font-bold text-[var(--neutral-900)]">21 Days</p>
+<p class="text-sm text-[var(--primary-700)]">Longest Streak</p>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold mb-4">Goals</h2>
+<div class="space-y-4">
+<div class="rounded-2xl bg-white p-4 shadow-sm">
+<div class="flex justify-between items-center mb-2">
+<p class="font-medium text-[var(--neutral-800)]">Weekly Workouts</p>
+<p class="text-sm font-medium text-[var(--primary-700)]">3 / 4</p>
+</div>
+<div class="w-full bg-[var(--primary-100)] rounded-full h-2.5">
+<div class="bg-[var(--primary-600)] h-2.5 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div class="rounded-2xl bg-white p-4 shadow-sm">
+<div class="flex justify-between items-center mb-2">
+<p class="font-medium text-[var(--neutral-800)]">Flexibility Score</p>
+<p class="text-sm font-medium text-[var(--primary-700)]">50%</p>
+</div>
+<div class="w-full bg-[var(--primary-100)] rounded-full h-2.5">
+<div class="bg-[var(--primary-600)] h-2.5 rounded-full" style="width: 50%"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-[var(--neutral-50)]/80 backdrop-blur-sm border-t border-[var(--neutral-200)] pb-3">
+<nav class="flex justify-around items-center pt-2">
+<a class="flex flex-col items-center gap-1 text-[var(--primary-700)] transition-colors hover:text-[var(--primary-600)]" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-[var(--primary-700)] transition-colors hover:text-[var(--primary-600)]" href="#">
+<span class="material-symbols-outlined">self_improvement</span>
+<p class="text-xs font-medium">Flows</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-[var(--primary-700)] transition-colors hover:text-[var(--primary-600)]" href="#">
+<span class="material-symbols-outlined">star</span>
+<p class="text-xs font-medium">Explore</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-[var(--primary-600)] transition-colors font-bold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">monitoring</span>
+<p class="text-xs font-medium">Progress</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-[var(--primary-700)] transition-colors hover:text-[var(--primary-600)]" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

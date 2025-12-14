@@ -1,0 +1,510 @@
+{
+  "poses": [
+    {
+      "pose_name": "Vrikshasana (Tree) Pose",
+      "reference_angles": {
+        "left_knee": 58.13918908267043,
+        "right_knee": 179.81329725199362,
+        "left_elbow": 156.3430632515688,
+        "right_elbow": 159.71915129754166,
+        "left_shoulder": 175.4462726004225,
+        "right_shoulder": 179.78770553556691,
+        "left_hip": 129.8334426257295,
+        "right_hip": 178.12589095529827
+      },
+      "deviations": {
+        "left_knee": 10.0,
+        "right_knee": 10.0,
+        "left_elbow": 10.0,
+        "right_elbow": 10.0,
+        "left_shoulder": 10.0,
+        "right_shoulder": 10.0,
+        "left_hip": 10.0,
+        "right_hip": 10.0
+      }
+    },
+    {
+      "pose_name": "Veerabhadrasana (Warrior) Pose",
+      "reference_angles": {
+        "left_knee": 123.88751066224823,
+        "right_knee": 175.74311113773763,
+        "left_elbow": 179.11416198353507,
+        "right_elbow": 168.88121457178465,
+        "left_shoulder": 106.34529307055162,
+        "right_shoulder": 102.14343970578093,
+        "left_hip": 109.93668017932706,
+        "right_hip": 143.55869674873856
+      },
+      "deviations": {
+        "left_knee": 10.0,
+        "right_knee": 10.0,
+        "left_elbow": 15.0,
+        "right_elbow": 10.0,
+        "left_shoulder": 10.0,
+        "right_shoulder": 10.0,
+        "left_hip": 10.0,
+        "right_hip": 25.0
+      }
+    },
+    {
+      "pose_name": "Utkata Konasana",
+      "reference_angles": {
+        "left_knee": 107.66959707462678,
+        "right_knee": 111.28162926808199,
+        "left_elbow": 82.93549715548406,
+        "right_elbow": 95.53968567714357,
+        "left_shoulder": 79.57137028778766,
+        "right_shoulder": 83.79393070018631,
+        "left_hip": 102.98742675496348,
+        "right_hip": 108.11039960176183
+      },
+      "deviations": {
+        "left_knee": 15.0,
+        "right_knee": 15.0,
+        "left_elbow": 15.0,
+        "right_elbow": 15.0,
+        "left_shoulder": 10.0,
+        "right_shoulder": 10.0,
+        "left_hip": 20.0,
+        "right_hip": 20.0
+      }
+    },
+    {
+      "pose_name": "Trikonasana (Triangle) Pose",
+      "reference_angles": {
+        "left_knee": 177.44132655325276,
+        "right_knee": 174.65242159912512,
+        "left_elbow": 178.0121165634864,
+        "right_elbow": 166.03581052980564,
+        "left_shoulder": 83.6137915418307,
+        "right_shoulder": 118.11019344357294,
+        "left_hip": 59.187757771784675,
+        "right_hip": 154.18064020523167
+      },
+      "deviations": {
+        "left_knee": 20.0,
+        "right_knee": 20.0,
+        "left_elbow": 20.0,
+        "right_elbow": 20.0,
+        "left_shoulder": 20.0,
+        "right_shoulder": 20.0,
+        "left_hip": 20.0,
+        "right_hip": 30.0
+      }
+    },
+    {
+      "pose_name": "Natarajasana",
+      "reference_angles": {
+        "left_knee": 99.93846268366141,
+        "right_knee": 160.78500297443128,
+        "left_elbow": 177.3011627788506,
+        "right_elbow": 163.22555699736446,
+        "left_shoulder": 62.760270919802814,
+        "right_shoulder": 172.31564544496362,
+        "left_hip": 99.27410614755414,
+        "right_hip": 123.500471605563
+      },
+      "deviations": {
+        "left_knee": 30.0,
+        "right_knee": 50.0,
+        "left_elbow": 40.0,
+        "right_elbow": 20.0,
+        "left_shoulder": 20.0,
+        "right_shoulder": 40.0,
+        "left_hip": 40.0,
+        "right_hip": 40.0
+      }
+    },
+    {
+      "pose_name": "Downward Dog Pose",
+      "reference_angles": {
+        "left_knee": 175.27767268579342,
+        "right_knee": 173.72856125781703,
+        "left_elbow": 171.21172845339223,
+        "right_elbow": 171.78159341573502,
+        "left_shoulder": 168.98814117068022,
+        "right_shoulder": 167.62971791961775,
+        "left_hip": 64.27918265021759,
+        "right_hip": 64.65978019124735
+      },
+      "deviations": {
+        "left_knee": 20.0,
+        "right_knee": 20.0,
+        "left_elbow": 10.0,
+        "right_elbow": 10.0,
+        "left_shoulder": 40.0,
+        "right_shoulder": 40.0,
+        "left_hip": 30.0,
+        "right_hip": 30.0
+      }
+    },
+    {
+      "pose_name": "Baddha Konasana",
+      "reference_angles": {
+        "left_knee": 43.54674681490753,
+        "right_knee": 40.43924431181575,
+        "left_elbow": 167.10578428969566,
+        "right_elbow": 167.28546197541954,
+        "left_shoulder": 7.720545986300711,
+        "right_shoulder": 7.2681792803506635,
+        "left_hip": 101.14282462908044,
+        "right_hip": 90.46423503232971
+      },
+      "deviations": {
+        "left_knee": 30.0,
+        "right_knee": 30.0,
+        "left_elbow": 20.0,
+        "right_elbow": 20.0,
+        "left_shoulder": 10.0,
+        "right_shoulder": 10.0,
+        "left_hip": 25.0,
+        "right_hip": 30.0
+      }
+    },
+    {
+      "pose_name": "Malasana (Garland) Pose",
+      "reference_angles": {
+        "left_knee": 22.278893129665295,
+        "right_knee": 20.49189046731042,
+        "left_elbow": 41.1177809509355,
+        "right_elbow": 49.0219598523263,
+        "left_shoulder": 26.415274240534572,
+        "right_shoulder": 24.795677130805398,
+        "left_hip": 22.269182357034044,
+        "right_hip": 20.5293825793584
+      },
+      "deviations": {
+        "left_knee": 10.0,
+        "right_knee": 10.0,
+        "left_elbow": 20.0,
+        "right_elbow": 20.0,
+        "left_shoulder": 10.0,
+        "right_shoulder": 10.0,
+        "left_hip": 20.0,
+        "right_hip": 20.0
+      }
+    },
+    {
+      "pose_name": "Utkatasana (Chair) Pose",
+      "reference_angles": {
+        "left_knee": 60.29726129762899,
+        "right_knee": 55.56126590010912,
+        "left_elbow": 167.3010303480652,
+        "right_elbow": 162.03719566088364,
+        "left_shoulder": 159.29990898218523,
+        "right_shoulder": 156.5901626096391,
+        "left_hip": 62.56229087529016,
+        "right_hip": 60.463943232471856
+      },
+      "deviations": {
+        "left_knee": 20.0,
+        "right_knee": 20.0,
+        "left_elbow": 10.0,
+        "right_elbow": 10.0,
+        "left_shoulder": 10.0,
+        "right_shoulder": 10.0,
+        "left_hip": 30.0,
+        "right_hip": 30.0
+      }
+    },
+    {
+      "pose_name": "Ananda Balasana",
+      "reference_angles": {
+        "left_knee": 125.51261024345102,
+        "right_knee": 127.80460656500878,
+        "left_elbow": 174.43828518886156,
+        "right_elbow": 173.791271873366,
+        "left_shoulder": 85.67092904080363,
+        "right_shoulder": 86.88366101702404,
+        "left_hip": 39.410979835196336,
+        "right_hip": 42.04913518253644
+      },
+      "deviations": {
+        "left_knee": 10.0,
+        "right_knee": 10.0,
+        "left_elbow": 10.0,
+        "right_elbow": 10.0,
+        "left_shoulder": 10.0,
+        "right_shoulder": 20.0,
+        "left_hip": 25.0,
+        "right_hip": 25.0
+      }
+    },
+    {
+      "pose_name": "Anantasana",
+      "reference_angles": {
+        "left_knee": 161.3914775180899,
+        "right_knee": 168.87219964204883,
+        "left_elbow": 178.54261189011675,
+        "right_elbow": 47.24164727046258,
+        "left_shoulder": 97.54598287014588,
+        "right_shoulder": 159.9578921992497,
+        "left_hip": 66.86687358912006,
+        "right_hip": 167.4564923288906
+      },
+      "deviations": {
+        "left_knee": 10.0,
+        "right_knee": 10.0,
+        "left_elbow": 10.0,
+        "right_elbow": 10.0,
+        "left_shoulder": 20.0,
+        "right_shoulder": 10.0,
+        "left_hip": 10.0,
+        "right_hip": 30.0
+      }
+    },
+    {
+      "pose_name": "Bhujangasana (Cobra) Pose",
+      "reference_angles": {
+        "left_knee": 159.61651681937835,
+        "right_knee": 160.70284750538613,
+        "left_elbow": 151.34768662041617,
+        "right_elbow": 150.90864266832708,
+        "left_shoulder": 5.735036063628334,
+        "right_shoulder": 5.222861492980655,
+        "left_hip": 135.06579787567404,
+        "right_hip": 133.8666996203462
+      },
+      "deviations": {
+        "left_knee": 20.0,
+        "right_knee": 30.0,
+        "left_elbow": 15.0,
+        "right_elbow": 25.0,
+        "left_shoulder": 15.0,
+        "right_shoulder": 15.0,
+        "left_hip": 25.0,
+        "right_hip": 25.0
+      }
+    },
+    {
+      "pose_name": "Dandasana (Staff) Pose",
+      "reference_angles": {
+        "left_knee": 179.19501809939413,
+        "right_knee": 177.21141605997107,
+        "left_elbow": 170.06999611156405,
+        "right_elbow": 169.49039834794925,
+        "left_shoulder": 154.62328834597523,
+        "right_shoulder": 153.65983680559057,
+        "left_hip": 104.48231116820502,
+        "right_hip": 99.4447985990637
+      },
+      "deviations": {
+        "left_knee": 15.0,
+        "right_knee": 15.0,
+        "left_elbow": 10.0,
+        "right_elbow": 10.0,
+        "left_shoulder": 17.5,
+        "right_shoulder": 17.5,
+        "left_hip": 10.0,
+        "right_hip": 10.0
+      }
+    },
+    {
+      "pose_name": "Padmasana (Lotus) Pose",
+      "reference_angles": {
+        "left_knee": 26.021595884543732,
+        "right_knee": 31.19581125096657,
+        "left_elbow": 170.56859190269466,
+        "right_elbow": 172.53115021166772,
+        "left_shoulder": 13.493004749991218,
+        "right_shoulder": 12.712201303228856,
+        "left_hip": 100.13922034922777,
+        "right_hip": 100.08339173343262
+      },
+      "deviations": {
+        "left_knee": 20.0,
+        "right_knee": 20.0,
+        "left_elbow": 10.0,
+        "right_elbow": 10.0,
+        "left_shoulder": 15.0,
+        "right_shoulder": 10.0,
+        "left_hip": 20.0,
+        "right_hip": 20.0
+      }
+    },
+    {
+      "pose_name": "Boat Pose",
+      "reference_angles": {
+        "left_knee": 172.29222447288444,
+        "right_knee": 171.88183999172037,
+        "left_elbow": 138.73752169484686,
+        "right_elbow": 150.3110921819559,
+        "left_shoulder": 47.28027350822134,
+        "right_shoulder": 58.213115676121866,
+        "left_hip": 61.22285810418729,
+        "right_hip": 60.45477243430859
+      },
+      "deviations": {
+        "left_knee": 8.0,
+        "right_knee": 8.0,
+        "left_elbow": 12.0,
+        "right_elbow": 12.0,
+        "left_shoulder": 15.0,
+        "right_shoulder": 15.0,
+        "left_hip": 20.0,
+        "right_hip": 20.0
+      }
+    },
+    {
+      "pose_name": "Bridge Pose",
+      "reference_angles": {
+        "left_knee": 69.40380485286526,
+        "right_knee": 63.966914248722304,
+        "left_elbow": 154.50943020366233,
+        "right_elbow": 154.13087282299057,
+        "left_shoulder": 75.59546408966598,
+        "right_shoulder": 70.62806510146747,
+        "left_hip": 144.66542803281266,
+        "right_hip": 147.83132193186194
+      },
+      "deviations": {
+        "left_knee": 15.0,
+        "right_knee": 15.0,
+        "left_elbow": 30.0,
+        "right_elbow": 30.0,
+        "left_shoulder": 30.0,
+        "right_shoulder": 30.0,
+        "left_hip": 15.0,
+        "right_hip": 15.0
+      }
+    },
+    {
+      "pose_name": "Fish Pose",
+      "reference_angles": {
+        "left_knee": 161.55451125880003,
+        "right_knee": 176.8136749588996,
+        "left_elbow": 146.99522897085424,
+        "right_elbow": 146.28388074251444,
+        "left_shoulder": 30.71458153637934,
+        "right_shoulder": 32.23752643867953,
+        "left_hip": 169.18832255078559,
+        "right_hip": 175.49579177720557
+      },
+      "deviations": {
+        "left_knee": 15.0,
+        "right_knee": 15.0,
+        "left_elbow": 20.0,
+        "right_elbow": 20.0,
+        "left_shoulder": 15.0,
+        "right_shoulder": 15.0,
+        "left_hip": 15.0,
+        "right_hip": 15.0
+      }
+    },
+    {
+      "pose_name": "Gate Pose",
+      "reference_angles": {
+        "left_knee": 22.727315400656234,
+        "right_knee": 177.48103763420474,
+        "left_elbow": 174.18903990346985,
+        "right_elbow": 171.30824874859124,
+        "left_shoulder": 166.89244592824633,
+        "right_shoulder": 61.315150621754775,
+        "left_hip": 160.63889209745045,
+        "right_hip": 78.34338532359077
+      },
+      "deviations": {
+        "left_knee": 15.0,
+        "right_knee": 15.0,
+        "left_elbow": 15.0,
+        "right_elbow": 15.0,
+        "left_shoulder": 15.0,
+        "right_shoulder": 15.0,
+        "left_hip": 25.0,
+        "right_hip": 25.0
+      }
+    },
+    {
+      "pose_name": "Viparita Karani Asana",
+      "reference_angles": {
+        "left_knee": 178.05331830062946,
+        "right_knee": 177.2556232552708,
+        "left_elbow": 172.83692024883712,
+        "right_elbow": 175.03460579309447,
+        "left_shoulder": 34.903011035446816,
+        "right_shoulder": 55.403044699878414,
+        "left_hip": 111.51352902087683,
+        "right_hip": 113.4185151659768
+      },
+      "deviations": {
+        "left_knee": 10.0,
+        "right_knee": 10.0,
+        "left_elbow": 15.0,
+        "right_elbow": 15.0,
+        "left_shoulder": 15.0,
+        "right_shoulder": 15.0,
+        "left_hip": 15.0,
+        "right_hip": 15.0
+      }
+    },
+    {
+      "pose_name": "Plank Pose",
+      "reference_angles": {
+        "left_knee": 169.3392262116685,
+        "right_knee": 173.62651745191857,
+        "left_elbow": 168.53539639167235,
+        "right_elbow": 172.73884270279592,
+        "left_shoulder": 60.845453271462915,
+        "right_shoulder": 61.76658429282084,
+        "left_hip": 170.68175488584447,
+        "right_hip": 173.47974478659427
+      },
+      "deviations": {
+        "left_knee": 10.0,
+        "right_knee": 10.0,
+        "left_elbow": 10.0,
+        "right_elbow": 10.0,
+        "left_shoulder": 10.0,
+        "right_shoulder": 10.0,
+        "left_hip": 10.0,
+        "right_hip": 10.0
+      }
+    },
+    {
+      "pose_name": "Supta Virasana Vajrasana",
+      "reference_angles": {
+        "left_knee": 30.17961133092414,
+        "right_knee": 24.01777571017681,
+        "left_elbow": 139.66855287818697,
+        "right_elbow": 135.4895007797693,
+        "left_shoulder": 154.11575510232024,
+        "right_shoulder": 169.43451785228592,
+        "left_hip": 171.49368769062002,
+        "right_hip": 168.66083387297715
+      },
+      "deviations": {
+        "left_knee": 15.0,
+        "right_knee": 15.0,
+        "left_elbow": 15.0,
+        "right_elbow": 15.0,
+        "left_shoulder": 12.0,
+        "right_shoulder": 12.0,
+        "left_hip": 12.0,
+        "right_hip": 12.0
+      }
+    },
+    {
+      "pose_name": "Wind Relieving Pose",
+      "reference_angles": {
+        "left_knee": 49.33599721925346,
+        "right_knee": 173.88268289071647,
+        "left_elbow": 116.99356274240468,
+        "right_elbow": 121.35891932833086,
+        "left_shoulder": 28.526389297400115,
+        "right_shoulder": 31.860152206350406,
+        "left_hip": 48.61148427583009,
+        "right_hip": 176.81225815813204
+      },
+      "deviations": {
+        "left_knee": 10.0,
+        "right_knee": 15.0,
+        "left_elbow": 10.0,
+        "right_elbow": 10.0,
+        "left_shoulder": 15.0,
+        "right_shoulder": 15.0,
+        "left_hip": 10.0,
+        "right_hip": 15.0
+      }
+    }
+  ]
+}

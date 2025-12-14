@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+**/build/
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+out/
+
+# Local data artifacts
+YogaKotlinPipeline/data/
+YogaKotlinPipeline/models/training/
+YogaKotlinPipeline/models/tflite/
+
+# OS files
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.env
+.env.local
+.venv/

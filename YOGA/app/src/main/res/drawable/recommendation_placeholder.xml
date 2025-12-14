@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#F5F5F5" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+    
+    <!-- Yoga Pose Icon -->
+    <item android:gravity="center">
+        <vector
+            android:width="48dp"
+            android:height="48dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            
+            <!-- Simple yoga pose silhouette -->
+            <path
+                android:fillColor="#CCCCCC"
+                android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8z"/>
+            
+            <!-- Head -->
+            <path
+                android:fillColor="#CCCCCC"
+                android:pathData="M10,6A2,2 0 0,1 12,8A2,2 0 0,1 10,10A2,2 0 0,1 8,8A2,2 0 0,1 10,6Z"/>
+            
+            <!-- Body -->
+            <path
+                android:fillColor="#CCCCCC"
+                android:pathData="M10,10L14,10L14,16L10,16z"/>
+            
+            <!-- Arms -->
+            <path
+                android:fillColor="#CCCCCC"
+                android:pathData="M8,12L10,12L10,14L8,14z"/>
+            <path
+                android:fillColor="#CCCCCC"
+                android:pathData="M14,12L16,12L16,14L14,14z"/>
+            
+            <!-- Legs -->
+            <path
+                android:fillColor="#CCCCCC"
+                android:pathData="M10,16L10,18L8,18z"/>
+            <path
+                android:fillColor="#CCCCCC"
+                android:pathData="M14,16L14,18L16,18z"/>
+        </vector>
+    </item>
+    
+    <!-- Placeholder Text -->
+    <item android:gravity="bottom|center" android:top="60dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#E0E0E0" />
+            <corners android:radius="4dp" />
+            <size android:width="80dp" android:height="16dp" />
+        </shape>
+    </item>
+</layer-list>

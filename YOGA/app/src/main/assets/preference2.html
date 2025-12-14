@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B600%3B700&amp;family=Noto+Sans%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Yoga Goal Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #7a3df5;
+      --background-color: #f9f8fc;
+      --text-color: #120d1c;
+      --border-color: #d7cee8;
+      --light-violet: #f3eefd;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-color)]" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-10 bg-[var(--background-color)] px-4 pt-4">
+<div class="flex items-center justify-between">
+<button class="text-[var(--text-color)] flex size-10 items-center justify-center rounded-full hover:bg-gray-100">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<span class="text-sm font-medium text-gray-500">2 of 3</span>
+<div class="w-10"></div>
+</div>
+<div class="mt-4 h-1 w-full rounded-full bg-gray-200">
+<div class="h-1 w-2/3 rounded-full bg-[var(--primary-color)]"></div>
+</div>
+</header>
+<main class="flex-grow px-5 pt-8 pb-8">
+<div class="text-center">
+<h1 class="text-[var(--text-color)] text-3xl font-bold leading-tight tracking-tight">What's your main goal?</h1>
+<p class="mt-2 text-base font-normal leading-normal text-gray-600">Select what you want to focus on. You can change this later.</p>
+</div>
+<div class="mt-8 grid grid-cols-2 gap-4">
+<label class="flex flex-col items-center justify-center rounded-2xl border-2 border-transparent bg-white p-4 text-center shadow-sm transition-all has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-[var(--light-violet)] has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 cursor-pointer">
+<input checked="" class="sr-only" name="goal" type="radio" value="weight_loss"/>
+<div class="flex size-16 items-center justify-center rounded-full bg-[var(--light-violet)]">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">scale</span>
+</div>
+<span class="mt-3 block text-base font-semibold text-[var(--text-color)]">Weight Loss</span>
+</label>
+<label class="flex flex-col items-center justify-center rounded-2xl border-2 border-transparent bg-white p-4 text-center shadow-sm transition-all has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-[var(--light-violet)] has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 cursor-pointer">
+<input class="sr-only" name="goal" type="radio" value="flexibility"/>
+<div class="flex size-16 items-center justify-center rounded-full bg-[var(--light-violet)]">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">self_improvement</span>
+</div>
+<span class="mt-3 block text-base font-semibold text-[var(--text-color)]">Flexibility</span>
+</label>
+<label class="flex flex-col items-center justify-center rounded-2xl border-2 border-transparent bg-white p-4 text-center shadow-sm transition-all has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-[var(--light-violet)] has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 cursor-pointer">
+<input class="sr-only" name="goal" type="radio" value="core_strength"/>
+<div class="flex size-16 items-center justify-center rounded-full bg-[var(--light-violet)]">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">fitness_center</span>
+</div>
+<span class="mt-3 block text-base font-semibold text-[var(--text-color)]">Core Strength</span>
+</label>
+<label class="flex flex-col items-center justify-center rounded-2xl border-2 border-transparent bg-white p-4 text-center shadow-sm transition-all has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-[var(--light-violet)] has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 cursor-pointer">
+<input class="sr-only" name="goal" type="radio" value="stress_relief"/>
+<div class="flex size-16 items-center justify-center rounded-full bg-[var(--light-violet)]">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">spa</span>
+</div>
+<span class="mt-3 block text-base font-semibold text-[var(--text-color)]">Stress Relief</span>
+</label>
+<label class="flex flex-col items-center justify-center rounded-2xl border-2 border-transparent bg-white p-4 text-center shadow-sm transition-all has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-[var(--light-violet)] has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 cursor-pointer">
+<input class="sr-only" name="goal" type="radio" value="better_posture"/>
+<div class="flex size-16 items-center justify-center rounded-full bg-[var(--light-violet)]">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">accessibility_new</span>
+</div>
+<span class="mt-3 block text-base font-semibold text-[var(--text-color)]">Better Posture</span>
+</label>
+<label class="flex flex-col items-center justify-center rounded-2xl border-2 border-transparent bg-white p-4 text-center shadow-sm transition-all has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-[var(--light-violet)] has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 cursor-pointer">
+<input class="sr-only" name="goal" type="radio" value="digestion"/>
+<div class="flex size-16 items-center justify-center rounded-full bg-[var(--light-violet)]">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">stomach</span>
+</div>
+<span class="mt-3 block text-base font-semibold text-[var(--text-color)]">Digestion</span>
+</label>
+<label class="flex flex-col items-center justify-center rounded-2xl border-2 border-transparent bg-white p-4 text-center shadow-sm transition-all has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-[var(--light-violet)] has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 cursor-pointer">
+<input class="sr-only" name="goal" type="radio" value="endurance"/>
+<div class="flex size-16 items-center justify-center rounded-full bg-[var(--light-violet)]">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">directions_run</span>
+</div>
+<span class="mt-3 block text-base font-semibold text-[var(--text-color)]">Endurance</span>
+</label>
+<label class="flex flex-col items-center justify-center rounded-2xl border-2 border-transparent bg-white p-4 text-center shadow-sm transition-all has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-[var(--light-violet)] has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 cursor-pointer">
+<input class="sr-only" name="goal" type="radio" value="relaxation"/>
+<div class="flex size-16 items-center justify-center rounded-full bg-[var(--light-violet)]">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">self_care</span>
+</div>
+<span class="mt-3 block text-base font-semibold text-[var(--text-color)]">Relaxation</span>
+</label>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-[var(--background-color)] px-5 py-4 border-t border-gray-200">
+<button class="flex w-full items-center justify-center rounded-xl h-14 bg-[var(--primary-color)] text-white text-lg font-bold leading-normal tracking-[0.015em] shadow-lg shadow-violet-200 transition-colors hover:bg-violet-700">
+<span class="truncate">Continue</span>
+</button>
+</footer>
+</div>
+
+</body></html>

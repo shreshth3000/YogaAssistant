@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yoga Assistant</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #7a3df5;
+            --secondary-color: #ebe7f4;
+            --text-primary: #120d1c;
+            --text-secondary: #65499c;
+            --background-color: #f9f8fc;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white;
+        }
+        .btn-secondary {
+            @apply bg-[var(--secondary-color)] text-[var(--text-primary)];
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-color)]">
+<div class="flex flex-col min-h-screen">
+<header class="flex-shrink-0">
+<div class="relative h-96">
+<img alt="Woman doing yoga outdoors" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ak80yzIpLPTEu8pVcve2xBzpp39txcavnw1KnBu_cBHympoM5o3dcoyI_cePQFBwBssYM3PahvKcGoNAdiZnrXx89vWArZUlMswXoOG0kGDlj1kn5soMkojSVr7bSBxzYLg8yBiUtqCk08f8zg6EtPFLSIMWL6Aaxi8aVRrDxmcWWEJJzr402RfsXFSv9CDBYHVEjz7F1tkgOCXFg71NTrMe-SR9ki-QxinOzh42_Uy9Mgyj_TaRF5zDOmJpANt1lk33CrpeL_DT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+</div>
+</header>
+<main class="flex-grow flex flex-col justify-center px-6 py-8">
+<div class="text-center">
+<h1 class="text-3xl font-bold text-[var(--text-primary)] leading-tight">Find your inner peace</h1>
+<p class="mt-2 text-base text-[var(--text-primary)]/80">
+                    Discover personalized yoga routines and mindfulness exercises tailored to your needs.
+                </p>
+</div>
+<div class="mt-12 space-y-4">
+<button class="w-full h-14 flex items-center justify-center rounded-xl btn-primary text-lg font-semibold tracking-wide shadow-lg shadow-purple-500/20 transition-transform duration-300 active:scale-95">
+                    Log In
+                </button>
+<button class="w-full h-14 flex items-center justify-center rounded-xl btn-secondary text-lg font-semibold tracking-wide transition-transform duration-300 active:scale-95">
+                    Sign Up
+                </button>
+</div>
+</main>
+<footer class="flex-shrink-0 px-6 pb-8 pt-4">
+<p class="text-center text-xs text-[var(--text-secondary)]">
+                By continuing, you agree to our <a class="font-medium underline" href="#">Terms of Service</a> and <a class="font-medium underline" href="#">Privacy Policy</a>.
+            </p>
+</footer>
+</div>
+
+</body></html>

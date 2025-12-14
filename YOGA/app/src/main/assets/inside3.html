@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yoga Assistant</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #7a3df5;
+        --secondary-color: #E8E2F9;
+        --background-color: #F9F8FD;
+        --text-primary: #120D1C;
+        --text-secondary: #716980;
+        --accent-color: #F1EDFC;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--background-color);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-color)]">
+<div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden">
+<main class="flex-grow">
+<header class="flex items-center p-4 justify-between sticky top-0 bg-[var(--background-color)] bg-opacity-80 backdrop-blur-sm z-10">
+<button class="text-[var(--text-primary)]">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-[var(--text-primary)] text-xl font-bold">Yoga Assistant</h1>
+<div class="w-8"></div>
+</header>
+<div class="px-4 py-2">
+<h2 class="text-[var(--text-primary)] text-2xl font-bold leading-tight tracking-tight">Recommended for you</h2>
+</div>
+<div class="space-y-4 p-4">
+<div class="flex items-center gap-4 rounded-2xl bg-white p-4 shadow-sm">
+<div class="w-24 h-24 flex-shrink-0">
+<img alt="Mountain Pose" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwYyHmEugHq7vs-ImjSBbdHaI0tDTGC3MOGIrwf_C9Aw4RXboyKMTqSmmvdeSm13wkGAb0CxRkvvI7ufLe5iuIYnnPNyyVQ0J_k0HBcZN0FaS2ysusH2fdtmYdEmIJhCtxvdY0lvwkuzTeHCnBTOFT-paTfS-DHlWhrxnwu-Ftmhm6zbBiCgF21HyBC4yG9Z_qK_MKPu9IOIyvChLaD5iTg5dfPYVAI74xZMK2n6FnJrzOxV1AWWrNkVYRMzs99Mlrm6Y67Wixn1xn"/>
+</div>
+<div class="flex-grow">
+<span class="text-xs font-semibold uppercase tracking-wider text-[var(--primary-color)]">Beginner</span>
+<h3 class="text-lg font-bold text-[var(--text-primary)] mt-1">Mountain Pose</h3>
+<p class="text-sm text-[var(--text-secondary)] mt-1">Grounding, improves posture</p>
+</div>
+<button class="text-[var(--primary-color)]">
+<span class="material-symbols-outlined text-3xl">play_circle</span>
+</button>
+</div>
+<div class="flex items-center gap-4 rounded-2xl bg-white p-4 shadow-sm">
+<div class="w-24 h-24 flex-shrink-0">
+<img alt="Warrior II Pose" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEIcV8oOBOruzKJWVcJKbUbVXfXUpPNDQVxzhySjAKVfG-nkevbwmpbDwWJ2mYkdqXjgrRqLRGG7SvSj_8m75xVz-rWAO0tARubMeU_zgIjM4xz-U1PwxZ9KjTmW8XgQxOtT1TikuY1gYltGE9lfFDEtcM-cyCLNfWwqwkdtzkPg_VPaMOGi3nkLmABfwYynjQxF4ZTFn9eyYx7oMuaJUwOyQA0jZ0I2uqq8cBJt_rhjLk6WetBS4ckGzqp-gIh6hQQF7MHpWZSIVe"/>
+</div>
+<div class="flex-grow">
+<span class="text-xs font-semibold uppercase tracking-wider text-[var(--primary-color)]">Intermediate</span>
+<h3 class="text-lg font-bold text-[var(--text-primary)] mt-1">Warrior II Pose</h3>
+<p class="text-sm text-[var(--text-secondary)] mt-1">Strengthens legs, opens hips</p>
+</div>
+<button class="text-[var(--primary-color)]">
+<span class="material-symbols-outlined text-3xl">play_circle</span>
+</button>
+</div>
+<div class="flex items-center gap-4 rounded-2xl bg-white p-4 shadow-sm">
+<div class="w-24 h-24 flex-shrink-0">
+<img alt="Crow Pose" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMJNDGDzS9iPFC049e6Vb0YCo6GxbViLrcfz_sZUzck76LyDIqZCuqg2k2H69W8CVRnKq4zZ5BnU5XUfwcpV3-IWrbL-7tVpdkX-7xJwkEabstT28XiTyvzRjJs92P35KbI0j5l01xwn6qDgY7RrZAy5bOQqjQzGr-yJZGGHdQ2yvMYjuUN_FLj576VI9VxMx7YMDXIWHCEYTvSFmKCgk0siDzYuzlK_Aic7LEZ9Yqfqzm9PB9I3yn-fqgHckSHCUy56J9aCWS7Tpk"/>
+</div>
+<div class="flex-grow">
+<span class="text-xs font-semibold uppercase tracking-wider text-[var(--primary-color)]">Advanced</span>
+<h3 class="text-lg font-bold text-[var(--text-primary)] mt-1">Crow Pose</h3>
+<p class="text-sm text-[var(--text-secondary)] mt-1">Builds arm strength, balance</p>
+</div>
+<button class="text-[var(--primary-color)]">
+<span class="material-symbols-outlined text-3xl">play_circle</span>
+</button>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-[var(--background-color)] bg-opacity-95 backdrop-blur-sm pb-safe">
+<nav class="flex justify-around border-t border-[var(--secondary-color)] px-2 pt-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-[var(--text-secondary)]" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-[var(--text-secondary)]" href="#">
+<span class="material-symbols-outlined">view_timeline</span>
+<span class="text-xs font-medium">Flows</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-[var(--primary-color)] bg-[var(--accent-color)] rounded-t-lg pt-2 pb-1" href="#">
+<span class="material-symbols-outlined">star</span>
+<span class="text-xs font-bold">AI</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-[var(--text-secondary)]" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-xs font-medium">Progress</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-[var(--text-secondary)]" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

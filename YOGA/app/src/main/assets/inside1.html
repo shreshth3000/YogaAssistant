@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yoga Assistant</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --background: #F8F7FC;
+            --foreground: #120D1C;
+            --card: #FFFFFF;
+            --card-foreground: #120D1C;
+            --popover: #FFFFFF;
+            --popover-foreground: #120D1C;
+            --primary: #8E77D8;
+            --primary-foreground: #FFFFFF;
+            --secondary: #E9E4F3;
+            --secondary-foreground: #4A3A74;
+            --muted: #F2F0F7;
+            --muted-foreground: #6F6683;
+            --accent: #F2F0F7;
+            --accent-foreground: #4A3A74;
+            --destructive: #EF4444;
+            --destructive-foreground: #F8F8F8;
+            --border: #E9E4F3;
+            --input: #E9E4F3;
+            --ring: #8E77D8;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(180deg, #E6E1F4 0%, #F8F7FC 50%, #E3F2F0 100%);
+        }
+        .neumorphic-card {
+            background-color: var(--card);
+            border-radius: 2rem;
+            box-shadow: 6px 6px 12px #d9d5e3, -6px -6px 12px #ffffff;
+            transition: all 0.3s ease-in-out;
+        }
+        .neumorphic-card:hover {
+            box-shadow: 8px 8px 16px #d9d5e3, -8px -8px 16px #ffffff;
+            transform: translateY(-2px);
+        }
+        .neumorphic-button {
+            background: linear-gradient(145deg, #f0ecf9, #c8c2d9);
+            border-radius: 1.5rem;
+            box-shadow: 5px 5px 10px #bab5c6, -5px -5px 10px #ffffff;
+            color: var(--secondary-foreground);
+            transition: all 0.2s ease-in-out;
+        }
+        .neumorphic-button:hover {
+            background: linear-gradient(145deg, #c8c2d9, #f0ecf9);
+        }
+        .neumorphic-button-primary {
+            background: linear-gradient(145deg, #A48BFF, #7B61E8);
+            border-radius: 1.5rem;
+            box-shadow: 6px 6px 12px #6d54cf, -6px -6px 12px #ad9cff;
+            color: white;
+            transition: all 0.2s ease-in-out;
+        }
+        .neumorphic-button-primary:hover {
+             background: linear-gradient(145deg, #7B61E8, #A48BFF);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen">
+<div class="relative flex size-full flex-col justify-between group/design-root overflow-x-hidden">
+<main class="flex-grow p-6">
+<header class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-4">
+<img alt="Amelia's avatar" class="w-14 h-14 rounded-full object-cover border-4 border-white shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgj_Ha2oMxKsuwpPXR5x9f3e8Okcc4XKEoO0uo8W574ugcZvvnnZssg61AN17CdCEf3MMCMmgF60vTNW9Jkq9KvwPYe-DirXpgBzf7kMCkCmSxFasR6xo16SYS6ty73cTGAbO-gOFXK5aYz5ElOq6nHnhmq9DQtWwOTqmyPb__yG-TKxksPWRVhk1WCku04mnQqhrDdoxSMXs6eG5TjfmWBDdqw01P2xm_BvmVZ5RBC7mO25bdNl7LSUGMFBFtiOALiriOb_K0jrKT"/>
+<div>
+<p class="text-[var(--muted-foreground)] text-lg">Hi, Amelia</p>
+<h1 class="text-2xl font-bold text-[var(--foreground)] tracking-tight">Welcome Back</h1>
+</div>
+</div>
+<button class="neumorphic-button p-3">
+<span class="material-symbols-outlined text-[var(--secondary-foreground)]">
+                        notifications
+                    </span>
+</button>
+</header>
+<div class="neumorphic-card p-6 mb-8 flex flex-col items-center text-center">
+<p class="text-sm font-medium text-[var(--muted-foreground)] uppercase tracking-wider">Daily Wellness Score</p>
+<div class="relative my-4">
+<svg class="w-32 h-32" viewBox="0 0 36 36">
+<path class="text-gray-200" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-[var(--primary)]" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3" transform="rotate(90 18 18)"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-4xl font-bold text-[var(--foreground)]">85</span>
+</div>
+</div>
+<p class="text-[var(--muted-foreground)] max-w-xs">You're doing great! Keep up the consistent practice.</p>
+</div>
+<button class="w-full h-16 neumorphic-button-primary flex items-center justify-center gap-2 text-lg font-bold mb-10 shadow-lg">
+<span class="material-symbols-outlined">play_arrow</span>
+<span>Start Yoga Session</span>
+</button>
+<h2 class="text-xl font-bold text-[var(--foreground)] mb-4 px-1">Recommended For You</h2>
+<div class="grid grid-cols-2 gap-5">
+<div class="flex flex-col gap-2">
+<div class="w-full aspect-w-1 aspect-h-1 rounded-3xl overflow-hidden shadow-lg">
+<img alt="Morning Flow Yoga" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-MZWuu2EhT0wi8Y1rKrdxFHYAAz6CgFexhb8RnpApDPxZ2mJ35HU9U1MKS2jsaebW7PkmgmANALpGLzNEDhFSupp6aOrExejrGvnZCNExmbXXkDZi6udAab-3uDMp5Ap3yuZtt-kSipI-hLLLBHngLFbYGQvqLifkxuLJBE-rBCWCP1JsBlbbKU4l1sMLdFaAPb_LCFuB_rZhFfgCdKs4SMO2wB1iwFTLqDi15rAHsm4j4RrYOIAzanRJtT6wvnUikva0yHA1SBWP"/>
+</div>
+<div>
+<p class="font-semibold text-[var(--foreground)]">Morning Flow</p>
+<p class="text-sm text-[var(--muted-foreground)]">15 min</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="w-full aspect-w-1 aspect-h-1 rounded-3xl overflow-hidden shadow-lg">
+<img alt="Evening Relaxation Yoga" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1JbcRkFzx5mWh5NqDbSFPdavFBbQF96xAE_I3WjhEomS9jgGKD2y91i5nWYizPl8ac1Udi8IwZnZIDL57IDHZydFMP-Vts_njX4Ayzv5z60WG7xhw7bOnsc_-gwnjSitKRPW9U7RW3Mz2eDqaIhlK8c4yGF5H3FfoIKWFxrlWKZp1lbB1d_cfhfKFl5LWzoMol20lhRIJJm1S00lFc9cLmJ1rZRpPrv4966vsV788XKmj5cfZUCBDGKjUZZFQVa_Z0mNZioJpELHU"/>
+</div>
+<div>
+<p class="font-semibold text-[var(--foreground)]">Relaxation</p>
+<p class="text-sm text-[var(--muted-foreground)]">20 min</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-[var(--background)]/80 backdrop-blur-sm pb-safe">
+<div class="flex justify-around items-center h-20 border-t border-[var(--border)] rounded-t-3xl shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center gap-1 text-[var(--primary)]" href="#">
+<span class="material-symbols-outlined text-3xl">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">search</span>
+<span class="text-xs font-medium">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">bar_chart_4_bars</span>
+<span class="text-xs font-medium">Progress</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>

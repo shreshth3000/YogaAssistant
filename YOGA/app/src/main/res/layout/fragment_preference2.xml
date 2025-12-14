@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".Preference2Fragment">
+
+    <LinearLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back button"
+                android:src="@drawable/ic_arrow_back"
+                android:tint="@color/text_primary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/preference2_progress"
+                android:textAlignment="center"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_weight="0.67"
+                android:background="@drawable/progress_fill_66" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_weight="0.33"
+                android:background="@drawable/progress_background" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/footer_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_container">
+
+        <LinearLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/preference2_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/preference2_subtitle"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="4">
+
+                <!-- Weight Loss -->
+                <RadioButton
+                    android:id="@+id/rb_weight_loss"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/goal_item_background"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/img_weight_loss"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:gravity="center"
+                    android:minHeight="140dp"
+                    android:padding="16dp"
+                    android:text="@string/goal_weight_loss"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+                <!-- Flexibility -->
+                <RadioButton
+                    android:id="@+id/rb_flexibility"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/goal_item_background"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/img_flexibility"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:gravity="center"
+                    android:minHeight="140dp"
+                    android:padding="16dp"
+                    android:text="@string/goal_flexibility"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+                <!-- Core Strength -->
+                <RadioButton
+                    android:id="@+id/rb_core_strength"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/goal_item_background"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/img_core_strength"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:gravity="center"
+                    android:minHeight="140dp"
+                    android:padding="16dp"
+                    android:text="@string/goal_core_strength"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+                <!-- Stress Relief -->
+                <RadioButton
+                    android:id="@+id/rb_stress_relief"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/goal_item_background"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/img_stress_relief"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:gravity="center"
+                    android:minHeight="140dp"
+                    android:padding="16dp"
+                    android:text="@string/goal_stress_relief"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+                <!-- Better Posture -->
+                <RadioButton
+                    android:id="@+id/rb_better_posture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/goal_item_background"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/img_better_posture"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:gravity="center"
+                    android:minHeight="140dp"
+                    android:padding="16dp"
+                    android:text="@string/goal_better_posture"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+                <!-- Digestion -->
+                <RadioButton
+                    android:id="@+id/rb_digestion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/goal_item_background"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/img_digestion"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:gravity="center"
+                    android:minHeight="140dp"
+                    android:padding="16dp"
+                    android:text="@string/goal_digestion"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+                <!-- Endurance -->
+                <RadioButton
+                    android:id="@+id/rb_endurance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/goal_item_background"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/img_endurance"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:gravity="center"
+                    android:minHeight="140dp"
+                    android:padding="16dp"
+                    android:text="@string/goal_endurance"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+                <!-- Relaxation -->
+                <RadioButton
+                    android:id="@+id/rb_relaxation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/goal_item_background"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/img_relaxation"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:gravity="center"
+                    android:minHeight="140dp"
+                    android:padding="16dp"
+                    android:text="@string/goal_relaxation"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer_container"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@drawable/footer_background_inside1"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/primary_color"
+            android:elevation="8dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/preference2_continue"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

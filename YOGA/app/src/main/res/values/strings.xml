@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Yoga AI Assistant</string>
+    
+    <!-- Onboarding Screen 1 -->
+    <string name="onboarding1_title">Your AI Yoga Assistant</string>
+    <string name="onboarding1_subtitle">Personalized yoga routines, real-time feedback, and progress tracking. Achieve your wellness goals with ease.</string>
+    <string name="onboarding1_button">Get Started</string>
+    
+    <!-- Onboarding Screen 2 -->
+    <string name="onboarding2_title">Find your inner peace</string>
+    <string name="onboarding2_subtitle">Discover personalized yoga routines and mindfulness exercises tailored to your needs.</string>
+    <string name="onboarding2_login">Log In</string>
+    <string name="onboarding2_signup">Sign Up</string>
+    <string name="onboarding2_terms">By continuing, you agree to our Terms of Service and Privacy Policy.</string>
+    
+    <!-- Login Screen -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Log in to continue your yoga journey.</string>
+    <string name="login_email_placeholder">Email or username</string>
+    <string name="login_password_placeholder">Password</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="login_remember_me">Remember me</string>
+    <string name="login_button">Log In</string>
+    <string name="login_no_account">Don\'t have an account?</string>
+    <string name="login_signup_link">Sign up</string>
+    
+    <!-- Signup Screen -->
+    <string name="signup_title">Sign up</string>
+    <string name="signup_header">Create your account</string>
+    <string name="signup_first_name_placeholder">First name</string>
+    <string name="signup_last_name_placeholder">Last name</string>
+    <string name="signup_email_placeholder">Email</string>
+    <string name="signup_password_placeholder">Password</string>
+    <string name="signup_button">Sign up</string>
+    <string name="signup_terms">By signing up, you agree to our Terms of Service and Privacy Policy.</string>
+    <string name="signup_has_account">Already have an account?</string>
+    <string name="signup_login_link">Log in</string>
+    
+    <!-- Preference Screen 1 -->
+    <string name="preference1_title">What\'s your problem area?</string>
+    <string name="preference1_subtitle">Select one or more options to personalize your practice.</string>
+    <string name="preference1_progress">1 of 3</string>
+    <string name="preference1_continue">Continue</string>
+    
+    <!-- Problem Areas -->
+    <string name="problem_back_pain">Back Pain</string>
+    <string name="problem_knee_pain">Knee Pain</string>
+    <string name="problem_shoulder_pain">Shoulder Pain</string>
+    <string name="problem_neck_pain">Neck Pain</string>
+    <string name="problem_joint_stiffness">Joint Stiffness</string>
+    <string name="problem_stress">Stress</string>
+    <string name="problem_low_flexibility">Low Flexibility</string>
+    <string name="problem_digestive_issues">Digestive Issues</string>
+    <string name="problem_balance_issues">Balance Issues</string>
+    
+    <!-- Preference Screen 2 -->
+    <string name="preference2_title">What\'s your main goal?</string>
+    <string name="preference2_subtitle">Select what you want to focus on. You can change this later.</string>
+    <string name="preference2_progress">2 of 3</string>
+    <string name="preference2_continue">Continue</string>
+    
+    <!-- Goals -->
+    <string name="goal_weight_loss">Weight Loss</string>
+    <string name="goal_flexibility">Flexibility</string>
+    <string name="goal_core_strength">Core Strength</string>
+    <string name="goal_stress_relief">Stress Relief</string>
+    <string name="goal_better_posture">Better Posture</string>
+    <string name="goal_digestion">Digestion</string>
+    <string name="goal_endurance">Endurance</string>
+    <string name="goal_relaxation">Relaxation</string>
+    
+    <!-- Preference Screen 3 -->
+    <string name="preference3_title">Almost there!</string>
+    <string name="preference3_subtitle">Just a few more details to complete your profile.</string>
+    <string name="preference3_progress">Step 3 of 3</string>
+    <string name="preference3_complete">Complete Profile</string>
+    
+    <!-- Level -->
+    <string name="level_beginner">Beginner</string>
+    <string name="level_intermediate">Intermediate</string>
+    <string name="level_advanced">Advanced</string>
+    
+    <!-- Pregnancy -->
+    <string name="pregnancy_yes">Yes</string>
+    <string name="pregnancy_no">No</string>
+    
+    <!-- Common -->
+    <string name="whats_your_level">What\'s your level?</string>
+    <string name="how_old_are_you">How old are you?</string>
+    <string name="age_placeholder">Enter your age</string>
+    <string name="are_you_pregnant">Are you currently pregnant?</string>
+    
+    <!-- New Parameters -->
+    <string name="whats_your_height">What\'s your height?</string>
+    <string name="height_placeholder">Enter your height (cm)</string>
+    <string name="whats_your_weight">What\'s your weight?</string>
+    <string name="weight_placeholder">Enter your weight (kg)</string>
+    <string name="what_mental_issues">Any mental issues?</string>
+    <string name="mental_issues_placeholder">e.g. stress, anxiety</string>
+    
+    <!-- Material Icons -->
+    <string name="icon_self_improvement">self_improvement</string>
+    <string name="icon_airline_seat_legroom_normal">airline_seat_legroom_normal</string>
+    <string name="icon_shoulder_check">shoulder_check</string>
+    <string name="icon_personal_injury">personal_injury</string>
+    <string name="icon_elderly_woman">elderly_woman</string>
+    <string name="icon_spa">spa</string>
+    <string name="icon_accessibility_new">accessibility_new</string>
+    <string name="icon_stomach">stomach</string>
+    <string name="icon_balance">balance</string>
+    <string name="icon_scale">scale</string>
+    <string name="icon_fitness_center">fitness_center</string>
+    <string name="icon_directions_run">directions_run</string>
+    <string name="icon_self_care">self_care</string>
+</resources>

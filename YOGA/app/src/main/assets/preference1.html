@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yoga Assistant - Problem Area</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #8B5CF6;--secondary-color: #C4B5FD;
+        --background-color: #F5F3FF;
+        --text-color: #1E1B26;
+        --border-color: #DDD6FE;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-color)]" style="font-family: 'Inter', sans-serif;">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="flex-grow">
+<header class="flex flex-col bg-[var(--background-color)] p-4 pb-2 sticky top-0 z-10">
+<div class="flex items-center justify-between w-full">
+<button class="text-[var(--text-color)] flex size-10 items-center justify-center rounded-full hover:bg-gray-200">
+<span class="material-symbols-outlined"> arrow_back_ios_new </span>
+</button>
+<span class="text-[var(--text-color)] text-sm font-medium">1 of 3</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-1.5 mt-4">
+<div class="bg-[var(--primary-color)] h-1.5 rounded-full" style="width: 33.33%"></div>
+</div>
+</header>
+<main class="px-5 pt-6 pb-8">
+<div class="mb-8 text-center">
+<h1 class="text-[var(--text-color)] text-3xl font-bold leading-tight tracking-tight">What's your problem area?</h1>
+<p class="text-gray-600 text-base font-normal leading-normal mt-2">Select one or more options to personalize your practice.</p>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<label class="flex flex-col items-center justify-center aspect-square rounded-2xl border-2 border-transparent p-2 text-center text-[var(--text-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-violet-100 cursor-pointer transition-all bg-white shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-4xl text-[var(--primary-color)]">self_improvement</span>
+<span class="text-sm font-medium mt-2">Back Pain</span>
+<input class="invisible absolute" name="problem_area" type="checkbox"/>
+</label>
+<label class="flex flex-col items-center justify-center aspect-square rounded-2xl border-2 border-transparent p-2 text-center text-[var(--text-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-violet-100 cursor-pointer transition-all bg-white shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-4xl text-[var(--primary-color)]">airline_seat_legroom_normal</span>
+<span class="text-sm font-medium mt-2">Knee Pain</span>
+<input class="invisible absolute" name="problem_area" type="checkbox"/>
+</label>
+<label class="flex flex-col items-center justify-center aspect-square rounded-2xl border-2 border-transparent p-2 text-center text-[var(--text-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-violet-100 cursor-pointer transition-all bg-white shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-4xl text-[var(--primary-color)]">shoulder_check</span>
+<span class="text-sm font-medium mt-2">Shoulder Pain</span>
+<input class="invisible absolute" name="problem_area" type="checkbox"/>
+</label>
+<label class="flex flex-col items-center justify-center aspect-square rounded-2xl border-2 border-transparent p-2 text-center text-[var(--text-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-violet-100 cursor-pointer transition-all bg-white shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-4xl text-[var(--primary-color)]">personal_injury</span>
+<span class="text-sm font-medium mt-2">Neck Pain</span>
+<input checked="" class="invisible absolute" name="problem_area" type="checkbox"/>
+</label>
+<label class="flex flex-col items-center justify-center aspect-square rounded-2xl border-2 border-transparent p-2 text-center text-[var(--text-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-violet-100 cursor-pointer transition-all bg-white shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-4xl text-[var(--primary-color)]">elderly_woman</span>
+<span class="text-sm font-medium mt-2">Joint Stiffness</span>
+<input class="invisible absolute" name="problem_area" type="checkbox"/>
+</label>
+<label class="flex flex-col items-center justify-center aspect-square rounded-2xl border-2 border-transparent p-2 text-center text-[var(--text-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-violet-100 cursor-pointer transition-all bg-white shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-4xl text-[var(--primary-color)]">spa</span>
+<span class="text-sm font-medium mt-2">Stress</span>
+<input checked="" class="invisible absolute" name="problem_area" type="checkbox"/>
+</label>
+<label class="flex flex-col items-center justify-center aspect-square rounded-2xl border-2 border-transparent p-2 text-center text-[var(--text-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-violet-100 cursor-pointer transition-all bg-white shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-4xl text-[var(--primary-color)]">accessibility_new</span>
+<span class="text-sm font-medium mt-2">Low Flexibility</span>
+<input class="invisible absolute" name="problem_area" type="checkbox"/>
+</label>
+<label class="flex flex-col items-center justify-center aspect-square rounded-2xl border-2 border-transparent p-2 text-center text-[var(--text-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-violet-100 cursor-pointer transition-all bg-white shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-4xl text-[var(--primary-color)]">stomach</span>
+<span class="text-sm font-medium mt-2">Digestive Issues</span>
+<input class="invisible absolute" name="problem_area" type="checkbox"/>
+</label>
+<label class="flex flex-col items-center justify-center aspect-square rounded-2xl border-2 border-transparent p-2 text-center text-[var(--text-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-violet-100 cursor-pointer transition-all bg-white shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-4xl text-[var(--primary-color)]">balance</span>
+<span class="text-sm font-medium mt-2">Balance Issues</span>
+<input class="invisible absolute" name="problem_area" type="checkbox"/>
+</label>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-white/70 backdrop-blur-sm px-5 py-4 border-t border-gray-200">
+<button class="w-full flex items-center justify-center rounded-full h-14 bg-[var(--primary-color)] text-white text-lg font-bold leading-normal tracking-[0.015em] shadow-lg shadow-violet-300 hover:bg-violet-700 transition-colors disabled:bg-gray-300 disabled:shadow-none">
+<span class="truncate">Continue</span>
+</button>
+</footer>
+</div>
+
+</body></html>

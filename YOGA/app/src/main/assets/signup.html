@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yoga Assistant - Sign Up</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #7a3df5;
+      --background-color: #F9F8FC;
+      --text-color: #120D1C;
+      --placeholder-color: #65499c;
+      --input-bg-color: #ebe7f4;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-color)] text-[var(--text-color)]">
+<div class="relative flex flex-col min-h-screen">
+<header class="flex items-center justify-between p-4">
+<button class="p-2">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold">Sign up</h1>
+<div class="w-8"></div>
+</header>
+<main class="flex-grow flex flex-col px-6 pt-8 pb-4">
+<h2 class="text-3xl font-bold tracking-tight mb-8">Create your account</h2>
+<div class="space-y-4">
+<input class="w-full h-14 px-4 rounded-xl bg-[var(--input-bg-color)] placeholder-text-[var(--placeholder-color)] text-base focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] transition-shadow" placeholder="First name" type="text"/>
+<input class="w-full h-14 px-4 rounded-xl bg-[var(--input-bg-color)] placeholder-text-[var(--placeholder-color)] text-base focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] transition-shadow" placeholder="Last name" type="text"/>
+<input class="w-full h-14 px-4 rounded-xl bg-[var(--input-bg-color)] placeholder-text-[var(--placeholder-color)] text-base focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] transition-shadow" placeholder="Email" type="email"/>
+<div class="relative">
+<input class="w-full h-14 px-4 rounded-xl bg-[var(--input-bg-color)] placeholder-text-[var(--placeholder-color)] text-base focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] transition-shadow" placeholder="Password" type="password"/>
+<button class="absolute inset-y-0 right-0 flex items-center pr-4 text-[var(--placeholder-color)]">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</div>
+<p class="text-xs text-gray-500 mt-4 text-center">
+        By signing up, you agree to our <a class="font-semibold text-[var(--primary-color)]" href="#">Terms of Service</a> and <a class="font-semibold text-[var(--primary-color)]" href="#">Privacy Policy</a>.
+      </p>
+<div class="flex-grow"></div>
+<button class="w-full h-14 mt-8 rounded-xl bg-[var(--primary-color)] text-white text-lg font-bold tracking-wide shadow-lg shadow-purple-200 hover:bg-opacity-90 transition-all">
+        Sign up
+      </button>
+<div class="text-center mt-6">
+<p class="text-sm text-gray-600">
+          Already have an account? <a class="font-bold text-[var(--primary-color)]" href="#">Log in</a>
+</p>
+</div>
+</main>
+</div>
+
+</body></html>
