@@ -17,11 +17,31 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY", ""))
 
 # Load embeddings
 model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
-with open("yoga_embeddings.pkl", "rb") as f:
-    df = pickle.load(f)
 
-print(f"✓ Loaded yoga embeddings: {df.shape[0]} poses")
-print(f"✓ Columns: {df.columns.tolist()}")
+# Try multiple paths for yoga_embeddings.pkl
+import os
+pkl_paths = [
+    "yoga_embeddings.pkl",
+    "/app/yoga_embeddings.pkl",
+    os.path.join(os.path.dirname(__file__), "yoga_embeddings.pkl")
+]
+
+df = None
+for path in pkl_paths:
+    try:
+        if os.path.exists(path):
+            with open(path, "rb") as f:
+                df = pickle.load(f)
+            print(f"✓ Loaded yoga embeddings from {path}: {df.shape[0]} poses")
+            print(f"✓ Columns: {df.columns.tolist()}")
+            break
+    except Exception as e:
+        print(f"Could not load from {path}: {e}")
+
+if df is None:
+    print("WARNING: Could not load yoga_embeddings.pkl from any path")
+    print(f"Current working directory: {os.getcwd()}")
+    print(f"Files in current directory: {os.listdir('.')}")
 
 class UserInput(BaseModel):
     age: int
@@ -161,5 +181,10 @@ Provide a helpful answer based on the knowledge base."""
 
 @app.get("/health")
 async def health():
-    return {"status": "ok", "service": "yoga-backend"}
+    return {
+        "status": "ok",
+        "service": "yoga-backend",
+        "embeddings_loaded": df is not None,
+        "api_key_configured": bool(os.getenv("GOOGLE_API_KEY"))
+    }
 
