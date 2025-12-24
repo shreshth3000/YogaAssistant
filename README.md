@@ -25,6 +25,7 @@ A comprehensive yoga assistance application with real-time pose detection, perso
 - Two main endpoints:
   - `/recommend/` - Personalized yoga recommendations
   - `/chat/` - Conversational yoga assistant with RAG
+- If you make changes to the backend or the Cloud Run integration, you will have to ask @shreshth3000 to manually redeploy the backend.
 
 ### Machine Learning
 
@@ -73,7 +74,7 @@ YogaAssistant/
 
 ### Deployment
 
-Backend is deployed on Google Cloud Run with 4GiB memory allocation.
+Backend is deployed on Google Cloud Run with 2GiB memory allocation.
 
 Deploy via Google Cloud Console:
 
@@ -181,7 +182,7 @@ Endpoint for monitoring service health.
 - Recommender: 100-200ms response time
 - Chatbot cold start: 10-30 seconds (first request)
 - Chatbot warm request: 2-3 seconds
-- Monthly cost: 3-6 USD on Cloud Run (4GiB instance)
+- Monthly cost: 3-6 USD on Cloud Run (2GiB instance)
 
 ## Contributing
 
@@ -194,4 +195,5 @@ Proprietary - All rights reserved
 ## Support
 
 For issues and feature requests, please use the GitHub Issues page.
+
 
