@@ -73,7 +73,7 @@ YogaAssistant/
 
 ### Deployment
 
-Backend is deployed on Google Cloud Run with 128MB memory allocation.
+Backend is deployed on Google Cloud Run with 4GiB memory allocation.
 
 Deploy via Google Cloud Console:
 
@@ -181,7 +181,7 @@ Endpoint for monitoring service health.
 - Recommender: 100-200ms response time
 - Chatbot cold start: 10-30 seconds (first request)
 - Chatbot warm request: 2-3 seconds
-- Monthly cost: 3-6 USD on Cloud Run (128MB instance)
+- Monthly cost: 3-6 USD on Cloud Run (4GiB instance)
 
 ## Contributing
 
@@ -194,3 +194,4 @@ Proprietary - All rights reserved
 ## Support
 
 For issues and feature requests, please use the GitHub Issues page.
+
